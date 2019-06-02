@@ -87,7 +87,7 @@ CREATE TABLE PlaneXFlight (
 );
 
 -- insert listo
-CREATE TABLE  (
+CREATE TABLE PlaneXPlaneModel (
   PlaneID integer,
   PlaneModelID integer,
   PRIMARY KEY (PlaneID, PlaneModelID)
@@ -99,11 +99,11 @@ CREATE TABLE PlaneXCellar (
   PRIMARY KEY (PlaneID, CellarID)
 );
 
-CREATE TABLE SuitCaseXCellar (
-  SuitCaseID INTEGER,
-  CellarID INTEGER,
-  PRIMARY KEY (SuitCaseID, CellarID)
-)
+-- CREATE TABLE SuitCaseXCellar (
+--   SuitCaseID INTEGER,
+--   CellarID INTEGER,
+--   PRIMARY KEY (SuitCaseID, CellarID)
+-- )
 
 ALTER TABLE ClientXSuitCase ADD FOREIGN KEY (ClientID) REFERENCES Client (ClientID);
 ALTER TABLE ClientXSuitCase ADD FOREIGN KEY (SuitCaseID) REFERENCES SuitCase (SuitCaseID);
@@ -123,5 +123,5 @@ ALTER TABLE PlaneXPlaneModel ADD FOREIGN KEY (PlaneID) REFERENCES Plane (PlaneID
 ALTER TABLE PlaneXCellar ADD FOREIGN KEY (PlaneID) REFERENCES Plane (PlaneID);
 ALTER TABLE PlaneXCellar ADD FOREIGN KEY (CellarID) REFERENCES Cellar (CellarID);
 
-ALTER TABLE SuitCaseXCellar ADD FOREIGN KEY (SuitCaseID) REFERENCES SuitCase (SuitCaseID);
-ALTER TABLE SuitCaseXCellar ADD FOREIGN KEY (CellarID) REFERENCES Cellar (CellarID);
+-- ALTER TABLE SuitCaseXCellar ADD FOREIGN KEY (SuitCaseID) REFERENCES SuitCase (SuitCaseID);
+-- ALTER TABLE SuitCaseXCellar ADD FOREIGN KEY (CellarID) REFERENCES Cellar (CellarID);
