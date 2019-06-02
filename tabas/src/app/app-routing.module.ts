@@ -15,7 +15,7 @@ import { EditClientesComponent } from './edit-clientes/edit-clientes.component';
 
 
 const routes: Routes = [
-  {path: 'login'            ,     component: LogInComponent},
+  {path: ''            ,     component: LogInComponent},
   {path: 'register'         ,     component: RegisterComponent},
   {path: 'maletas'          ,     component: MaletasComponent},
   {path: 'bagCarts'         ,     component: BagCartsComponent},
@@ -27,7 +27,7 @@ const routes: Routes = [
   {path: 'editBagCarts'     ,     component: EditBagCartsComponent},
   {path: 'editClientes'     ,     component: EditClientesComponent},
   {path: '**'              ,    component: Page404Component}
-  
+
 ];
 
 @NgModule({
