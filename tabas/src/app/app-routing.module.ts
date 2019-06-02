@@ -9,19 +9,25 @@ import { RegisterComponent } from './register/register.component';
 import { CreateMaletasComponent } from './create-maletas/create-maletas.component';
 import { CreateBagCartsComponent } from './create-bag-carts/create-bag-carts.component';
 import { CreateClientesComponent } from './create-clientes/create-clientes.component';
+import { EditMaletasComponent } from './edit-maletas/edit-maletas.component';
+import { EditBagCartsComponent } from './edit-bag-carts/edit-bag-carts.component';
+import { EditClientesComponent } from './edit-clientes/edit-clientes.component';
 
 
 const routes: Routes = [
-  {path: 'login'           ,    component: LogInComponent},
-  {path: 'register'        ,    component: RegisterComponent},
-  {path: 'maletas'         ,    component: MaletasComponent},
-  {path: 'bagCarts'        ,    component: BagCartsComponent},
-  {path: 'clientes'        ,    component: ClientesComponent},
-  {path: 'createMaletas'   ,    component: CreateMaletasComponent},
-  {path: 'createBagCarts'  ,    component: CreateBagCartsComponent},
-  {path: 'createClientes'  ,    component: CreateClientesComponent},
+  {path: 'login'            ,     component: LogInComponent},
+  {path: 'register'         ,     component: RegisterComponent},
+  {path: 'maletas'          ,     component: MaletasComponent},
+  {path: 'bagCarts'         ,     component: BagCartsComponent},
+  {path: 'clientes'         ,     component: ClientesComponent},
+  {path: 'createMaletas'    ,     component: CreateMaletasComponent},
+  {path: 'createBagCarts'   ,     component: CreateBagCartsComponent},
+  {path: 'createClientes'   ,     component: CreateClientesComponent},
+  {path: 'editMaletas'      ,     component: EditMaletasComponent},
+  {path: 'editBagCarts'     ,     component: EditBagCartsComponent},
+  {path: 'editClientes'     ,     component: EditClientesComponent},
   {path: '**'              ,    component: Page404Component}
-
+  
 ];
 
 @NgModule({
