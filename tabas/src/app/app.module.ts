@@ -12,6 +12,9 @@ import { CreateMaletasComponent } from './create-maletas/create-maletas.componen
 import { CreateBagCartsComponent } from './create-bag-carts/create-bag-carts.component';
 import { CreateClientesComponent } from './create-clientes/create-clientes.component';
 import { BagCartsComponent } from './bag-carts/bag-carts.component';
+import { EditMaletasComponent } from './edit-maletas/edit-maletas.component';
+import { EditBagCartsComponent } from './edit-bag-carts/edit-bag-carts.component';
+import { EditClientesComponent } from './edit-clientes/edit-clientes.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { BagCartsComponent } from './bag-carts/bag-carts.component';
     CreateMaletasComponent,
     CreateBagCartsComponent,
     CreateClientesComponent,
-    BagCartsComponent
+    BagCartsComponent,
+    EditMaletasComponent,
+    EditBagCartsComponent,
+    EditClientesComponent
   ],
   imports: [
     BrowserModule,
