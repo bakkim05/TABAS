@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { Page404Component } from './page404/page404.component';
@@ -15,7 +16,7 @@ import { EditClientesComponent } from './edit-clientes/edit-clientes.component';
 
 
 const routes: Routes = [
-  {path: ''            ,     component: LogInComponent},
+  {path: ''                 ,     component: LogInComponent},
   {path: 'register'         ,     component: RegisterComponent},
   {path: 'maletas'          ,     component: MaletasComponent},
   {path: 'bagCarts'         ,     component: BagCartsComponent},
@@ -26,7 +27,8 @@ const routes: Routes = [
   {path: 'editMaletas'      ,     component: EditMaletasComponent},
   {path: 'editBagCarts'     ,     component: EditBagCartsComponent},
   {path: 'editClientes'     ,     component: EditClientesComponent},
-  {path: '**'              ,    component: Page404Component}
+  {path: 'home'             ,     component: HomeComponent},
+  {path: '**'               ,     component: Page404Component}
 
 ];
 

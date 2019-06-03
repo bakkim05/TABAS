@@ -15,6 +15,7 @@ import { BagCartsComponent } from './bag-carts/bag-carts.component';
 import { EditMaletasComponent } from './edit-maletas/edit-maletas.component';
 import { EditBagCartsComponent } from './edit-bag-carts/edit-bag-carts.component';
 import { EditClientesComponent } from './edit-clientes/edit-clientes.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { EditClientesComponent } from './edit-clientes/edit-clientes.component';
     BagCartsComponent,
     EditMaletasComponent,
     EditBagCartsComponent,
-    EditClientesComponent
+    EditClientesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
