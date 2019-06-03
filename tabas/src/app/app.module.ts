@@ -1,3 +1,4 @@
+import { MenuComponent } from './menu/menu.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -32,7 +33,8 @@ import { HomeComponent } from './home/home.component';
     EditMaletasComponent,
     EditBagCartsComponent,
     EditClientesComponent,
-    HomeComponent
+    HomeComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
