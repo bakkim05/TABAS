@@ -1,0 +1,14 @@
+E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\bin\Debug\netcoreapp2.1\TABAS-REST.deps.json
+E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\bin\Debug\netcoreapp2.1\TABAS-REST.runtimeconfig.json
+E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\bin\Debug\netcoreapp2.1\TABAS-REST.runtimeconfig.dev.json
+E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\bin\Debug\netcoreapp2.1\TABAS-REST.dll
+E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS-REST.csprojAssemblyReference.cache
+E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS-REST.csproj.CoreCompileInputs.cache
+E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS-REST.RazorAssemblyInfo.cache
+E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS-REST.RazorAssemblyInfo.cs
+E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS-REST.AssemblyInfoInputs.cache
+E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS-REST.AssemblyInfo.cs
+E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS-REST.RazorTargetAssemblyInfo.cache
+E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\bin\Debug\netcoreapp2.1\TABAS-REST.pdb
+E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS-REST.dll
+E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS-REST.pdb
