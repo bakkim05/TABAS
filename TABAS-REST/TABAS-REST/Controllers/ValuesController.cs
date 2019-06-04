@@ -16,7 +16,7 @@ namespace TABAS_REST.Controllers
         public string Get()
         {
             ProcessRequest req = new ProcessRequest();
-            return req.request().ToString();
+            return "[{\"nombre\": \"Annmaria Jenicke\",\"tel\": 66136901,\"correo\": \"ajenicke9@constantcontact.com\",\"carnet\": 2015735845}]" ;//req.request().ToString();
         }
 
         // GET api/values/5

@@ -12,3 +12,17 @@ E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\bin\Debug\netcoreapp2.1\TABAS_RE
 E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS_REST.RazorTargetAssemblyInfo.cache
 E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS_REST.dll
 E:\Users\RED\Source\Repos\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS_REST.pdb
+C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS_REST.csprojAssemblyReference.cache
+C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS_REST.csproj.CoreCompileInputs.cache
+C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS_REST.RazorAssemblyInfo.cache
+C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS_REST.RazorAssemblyInfo.cs
+C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS_REST.AssemblyInfoInputs.cache
+C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS_REST.AssemblyInfo.cs
+C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS_REST.dll
+C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS_REST.pdb
+C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\bin\Debug\netcoreapp2.1\TABAS_REST.deps.json
+C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\bin\Debug\netcoreapp2.1\TABAS_REST.runtimeconfig.json
+C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\bin\Debug\netcoreapp2.1\TABAS_REST.runtimeconfig.dev.json
+C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\bin\Debug\netcoreapp2.1\TABAS_REST.dll
+C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\bin\Debug\netcoreapp2.1\TABAS_REST.pdb
+C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS_REST.RazorTargetAssemblyInfo.cache

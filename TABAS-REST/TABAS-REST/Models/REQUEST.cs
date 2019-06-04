@@ -16,8 +16,8 @@ namespace TABAS_REST.Models
         [DataMember(Name = CONSTANTS.MESSAGE_DATA)]
         public string M_data { get; set; }
         
-        [DataMember(Name = CONSTANTS.MESSAGE_DATA)]
-        public string M_data { get; set; }
+        //[DataMember(Name = CONSTANTS.MESSAGE_DATA)]
+        //public string M_data { get; set; }
 
     }
 }

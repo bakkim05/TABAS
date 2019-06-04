@@ -9,6 +9,6 @@ namespace TABAS_REST.Models
     [DataContract]
     public class USER_INFO
     {
-        [DataMember(Name = CONSTANTS.STARTS_AIRPORT_CODE)]
+        //[DataMember(Name = CONSTANTS.STARTS_AIRPORT_CODE)]
     }
 }
