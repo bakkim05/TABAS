@@ -2,40 +2,40 @@
 CREATE TABLE Employee (
   FirstName varchar (15),
   LastName varchar (15),
-  ID_number integer PRIMARY KEY NOT NULL,
+  ID_number bigint PRIMARY KEY NOT NULL,
   Role varchar
 );
 
 -- insert listo
 CREATE TABLE Client (
-  ClientID integer PRIMARY KEY NOT NULL,
+  ClientID bigint PRIMARY KEY NOT NULL,
   FirstName varchar (15),
   LastName varchar (15),
   Email varchar (320),
-  Phone integer,
+  Phone varchar (30),
   Carnet varchar (30)
 );
 
 -- insert listo
 CREATE TABLE SuitCase (
-  SuitCaseID integer PRIMARY KEY NOT NULL,
+  SuitCaseID bigint PRIMARY KEY NOT NULL,
   Color varchar (10),
-  Weight integer,
-  Cost integer,
+  Weight bigint,
+  Cost bigint,
   State BOOLEAN
 );
 
 -- insert listo
 CREATE TABLE BagCart (
-  BagCartID integer PRIMARY KEY NOT NULL,
+  BagCartID bigint PRIMARY KEY NOT NULL,
   Brand varchar (30),
-  Model integer,
+  Model bigint,
   Sec_Code varchar (10)
 );
 
 -- insert listo
 CREATE TABLE Flight (
-  FlightID integer PRIMARY KEY NOT NULL,
+  FlightID bigint PRIMARY KEY NOT NULL,
   Departure_Date timestamp,
   Origin varchar (30),
   Destiny varchar
@@ -43,65 +43,65 @@ CREATE TABLE Flight (
 
 -- insert listo
 CREATE TABLE Plane (
-  PlaneID integer PRIMARY KEY NOT NULL
+  PlaneID bigint PRIMARY KEY NOT NULL
 );
 
 -- insert listo
 CREATE TABLE PlaneModel (
-  PlaneModelID integer PRIMARY KEY NOT NULL,
-  CellarNumber integer
+  PlaneModelID bigint PRIMARY KEY NOT NULL,
+  CellarNumber bigint
 );
 
 CREATE TABLE Cellar (
-  CellarID integer PRIMARY KEY NOT NULL,
-  Capacity integer
+  CellarID bigint PRIMARY KEY NOT NULL,
+  Capacity bigint
 );
 
 -- insert listo
 CREATE TABLE ClientXSuitCase (
-  ClientID integer,
-  SuitCaseID integer,
-  PRIMARY KEY (ClientEmail, SuitCaseID)
+  ClientID bigint,
+  SuitCaseID bigint,
+  PRIMARY KEY (ClientID, SuitCaseID)
 );
 
 -- insert listo
 CREATE TABLE SuitCaseXBagCart (
-  SuitCaseID integer,
-  BagCartID integer,
+  SuitCaseID bigint,
+  BagCartID bigint,
   PRIMARY KEY (SuitCaseID, BagCartID)
 );
 
 -- insert listo
 CREATE TABLE FlightXBagCart (
-  BagCartID integer,
-  FlightID integer,
+  BagCartID bigint,
+  FlightID bigint,
   PRIMARY KEY (BagCartID, FlightID)
 );
 
 
 -- insert listo
 CREATE TABLE PlaneXFlight (
-  FlightID integer,
-  PlaneID integer,
+  FlightID bigint,
+  PlaneID bigint,
   PRIMARY KEY (FlightID, PlaneID)
 );
 
 -- insert listo
 CREATE TABLE PlaneXPlaneModel (
-  PlaneID integer,
-  PlaneModelID integer,
+  PlaneID bigint,
+  PlaneModelID bigint,
   PRIMARY KEY (PlaneID, PlaneModelID)
 );
 
 CREATE TABLE PlaneXCellar (
-  PlaneID integer,
-  CellarID integer,
+  PlaneID bigint,
+  CellarID bigint,
   PRIMARY KEY (PlaneID, CellarID)
 );
 
 -- CREATE TABLE SuitCaseXCellar (
---   SuitCaseID INTEGER,
---   CellarID INTEGER,
+--   SuitCaseID bigint,
+--   CellarID bigint,
 --   PRIMARY KEY (SuitCaseID, CellarID)
 -- )
 

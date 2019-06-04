@@ -1,28 +1,28 @@
-insert into Employee (FirstName, LastName, ID_number, role) 
-    values 
-        ("Bengt",      "Duke",        106860313, "Embarcador"),
-        ("Moise",      "Renon",       305680559, "Embarcador"),
-        ("Adelind",    "Scathard",    705790778, "Embarcador"),
-        ("Ollie",      "Cromarty",    905890449, "Embarcador"),
-        ("Marcellus",  "Cramond",     205980899, "Embarcador"),
-        ("Charyl",     "Crigin",      704890788, "Scan"),
-        ("Troy",       "Sandyfirth",  608966883, "Scan"),
-        ("Rosalia",    "O'Gready",    507870477, "Scan"),
-        ("Maurita",    "McCudden",    108980999, "Scan"),
-        ("Maximilien", "Vergo",       805660995, "Scan"),
-        ("Kristoffer", "Elverston",   207890336, "Administrador"),
-        ("Reinhold",   "Phillipson",  405890667, "Administrador"),
-        ("Lion",       "MacPike",     703980778, "Administrador"),
-        ("Davine",     "Malecky",     605990477, "Administrador"),
-        ("Mohandis",   "Hackelton",   308970465, "Administrador"),
-        ("Ninette",    "Galtone",     505860589, "Recepcionista"),
-        ("Ashly",      "Garrold",     508890898, "Recepcionista"),
-        ("Rachelle",   "Collacombe",  802690878, "Recepcionista"),
-        ("Nadean",     "Esch",        808930448, "Recepcionista"),
-        ("Shel",       "Bris",        508930445, "Recepcionista");
+INSERT INTO Employee (FirstName, LastName, ID_number, role) 
+    VALUES 
+        ('Bengt',      'Duke',        106860313, 'Embarcador'),
+        ('Moise',      'Renon',       305680559, 'Embarcador'),
+        ('Adelind',    'Scathard',    705790778, 'Embarcador'),
+        ('Ollie',      'Cromarty',    905890449, 'Embarcador'),
+        ('Marcellus',  'Cramond',     205980899, 'Embarcador'),
+        ('Charyl',     'Crigin',      704890788, 'Scan'),
+        ('Troy',       'Sandyfirth',  608966883, 'Scan'),
+        ('Rosalia',    'Wey',    507870477, 'Scan'),
+        ('Maurita',    'McCudden',    108980999, 'Scan'),
+        ('Maximilien', 'Vergo',       805660995, 'Scan'),
+        ('Kristoffer', 'Elverston',   207890336, 'Administrador'),
+        ('Reinhold',   'Phillipson',  405890667, 'Administrador'),
+        ('Lion',       'MacPike',     703980778, 'Administrador'),
+        ('Davine',     'Malecky',     605990477, 'Administrador'),
+        ('Mohandis',   'Hackelton',   308970465, 'Administrador'),
+        ('Ninette',    'Galtone',     505860589, 'Recepcionista'),
+        ('Ashly',      'Garrold',     508890898, 'Recepcionista'),
+        ('Rachelle',   'Collacombe',  802690878, 'Recepcionista'),
+        ('Nadean',     'Esch',        808930448, 'Recepcionista'),
+        ('Shel',       'Bris',        508930445, 'Recepcionista');
 
-insert into Client (ClientID, FirstName, LastName, Email, Phone, Carnet) 
-    values 
+INSERT INTO Client (ClientID, FirstName, LastName, Email, Phone, Carnet) 
+    VALUES 
         (3847890434, 'Korie', 'Carrier', 'kcarrier0@mediafire.com', '334-455-0889', '665-26-3833'),
         (8095460455, 'Lucias', 'Baynes', 'lbaynes1@cdbaby.com', '791-564-8633', '867-58-8100'),
         (1409559102, 'Norah', 'Rounding', 'nrounding2@vinaora.com', '553-276-0243', '102-31-7564'),
@@ -114,8 +114,8 @@ insert into Client (ClientID, FirstName, LastName, Email, Phone, Carnet)
         (3865515305, 'Angus', 'Caillou', 'acaillou2g@blogger.com', '629-993-2019', '207-12-9965'),
         (6023846107, 'Seline', 'Paviour', 'spaviour2h@usa.gov', '923-835-6849', '552-37-7287');
 
-insert into SuitCase (SuitCaseID, Color, Weight, Cost, State) 
-    values 
+INSERT INTO SuitCase (SuitCaseID, Color, Weight, Cost, State) 
+    VALUES 
         (4293130293, 'Indigo', 61, 4, true),
         (3516980415, 'Aquamarine', 2, 38, false),
         (5085282996, 'Goldenrod', 55, 97, false),
@@ -317,8 +317,8 @@ insert into SuitCase (SuitCaseID, Color, Weight, Cost, State)
         (2394000690, 'Mauv', 96, 91, true),
         (3913359805, 'Goldenrod', 36, 26, false);
 
-insert into BagCart (BagCartID, Brand, Model, Sec_Code)
-    values 
+INSERT INTO BagCart (BagCartID, Brand, Model, Sec_Code)
+    VALUES 
         (8327752959, 'S40', 2001, NULL),
         (9744656333, 'JX', 2013, NULL),
         (5996911510, 'LeSabre', 1987, NULL),
@@ -420,61 +420,61 @@ insert into BagCart (BagCartID, Brand, Model, Sec_Code)
         (8182787424, 'Cabriolet', 1985, NULL),
         (6202155236, 'Impala', 2008, NULL);
 
-insert into Flight (FlightID, Departure_Date, Origin, Dest) 
-    values 
-        (5005697948, '2018-08-30 08:16:05',"AAA", "AKP"),
-        (4495596596, '2018-10-28 17:12:04',"AAE", "AKN"),
-        (1801778752, '2018-11-23 07:16:15',"AAL", "AKL"),
-        (3103785237, '2018-08-19 15:07:55',"AAM", "AKK"),
-        (8255944421, '2019-10-17 18:07:46',"AAN", "AKJ"),
-        (7313463966, '2018-08-07 02:47:41',"AAQ", "AKI"),
-        (8172923133, '2019-05-17 16:48:53',"AAR", "AKF"),
-        (6499059540, '2019-11-19 01:00:44',"AAT", "AKB"),
-        (9465320519, '2019-08-11 04:05:34',"AAX", "AKA"),
-        (2279446888, '2019-03-02 10:11:15',"AAY", "AJU"),
-        (7847396934, '2019-07-27 21:37:45',"ABC", "AJP"),
-        (9662976660, '2018-11-15 04:05:11',"ABA", "AJR"),
-        (7232690949, '2019-05-26 17:45:22',"ABE", "AJL"),
-        (3913039570, '2019-12-25 17:42:23',"ABD", "AJN"),
-        (4691604592, '2018-10-14 03:02:41',"ABJ", "AJF"),
-        (4861350697, '2019-04-29 05:34:27',"ABI", "AJI"),
-        (8133140714, '2019-12-09 19:00:36',"ABL", "AIY"),
-        (5087895519, '2018-09-15 06:52:34',"ABK", "AJA"),
-        (2646525767, '2019-08-15 19:50:04',"ABQ", "AIT"),
-        (5168370741, '2018-12-13 10:46:20',"ABM", "AIU"),
-        (2471034242, '2019-01-18 05:49:14',"ABS", "AIA"),
-        (7877945460, '2018-08-19 07:26:40',"ABR", "AIN"),
-        (1551125422, '2019-08-02 12:01:40',"ABV", "AHS"),
-        (5798431700, '2018-11-21 05:02:52',"ABT", "AHU"),
-        (8701731949, '2019-12-19 07:14:33',"ABY", "AHE"),
-        (2293980477, '2019-01-02 14:12:53',"ABX", "AHO"),
-        (2928610172, '2019-10-08 15:20:52',"ACA", "AHB"),
-        (7326818508, '2019-12-09 21:05:40',"ABZ", "AHC"),
-        (2738473964, '2019-05-23 16:57:29',"ACE", "AGV"),
-        (6852790305, '2019-07-06 02:16:03',"ACC", "AGX"),
-        (8011980260, '2019-05-30 12:00:28',"ACI", "AGT"),
-        (6885144048, '2019-11-01 12:32:13',"ACH", "AGU"),
-        (6724412849, '2018-09-16 23:07:15',"ACS", "AGR"),
-        (5229898830, '2018-07-25 10:18:20',"ACK", "AGS"),
-        (3234935585, '2018-11-04 18:16:06',"ACV", "AGN"),
-        (3825917142, '2019-04-02 14:10:23',"ACT", "AGP"),
-        (3254406978, '2019-04-11 14:36:11',"ACZ", "AGH"),
-        (4863962500, '2018-06-09 17:39:40',"ACY", "AGM"),
-        (4421153741, '2019-09-02 13:40:49',"ADB", "AGA"),
-        (3301850047, '2019-08-03 05:13:06',"ADA", "AGF"),
-        (9414970705, '2019-12-05 04:31:03',"ADE", "AFL"),
-        (2854822059, '2018-10-17 08:20:11',"ADD", "AFT"),
-        (7969470120, '2018-08-21 07:25:35',"ADJ", "AEY"),
-        (5487036665, '2019-09-04 16:34:47',"ADF", "AFA"),
-        (2368864336, '2018-08-29 20:28:53',"ADL", "AET"),
-        (8459832043, '2019-04-29 12:54:21',"ADK", "AEX"),
-        (1834122552, '2019-08-14 09:50:05',"ADU", "AER"),
-        (3597117218, '2019-02-25 09:57:27',"ADQ", "AES"),
-        (9068557385, '2019-07-17 18:34:07',"ADZ", "AEH"),
-        (9903597375, '2019-10-03 22:58:52',"ADX", "AEP");
+INSERT INTO Flight (FlightID, Departure_Date, Origin, Destiny) 
+    VALUES 
+        (5005697948, '2018-08-30 08:16:05','AAA', 'AKP'),
+        (4495596596, '2018-10-28 17:12:04','AAE', 'AKN'),
+        (1801778752, '2018-11-23 07:16:15','AAL', 'AKL'),
+        (3103785237, '2018-08-19 15:07:55','AAM', 'AKK'),
+        (8255944421, '2019-10-17 18:07:46','AAN', 'AKJ'),
+        (7313463966, '2018-08-07 02:47:41','AAQ', 'AKI'),
+        (8172923133, '2019-05-17 16:48:53','AAR', 'AKF'),
+        (6499059540, '2019-11-19 01:00:44','AAT', 'AKB'),
+        (9465320519, '2019-08-11 04:05:34','AAX', 'AKA'),
+        (2279446888, '2019-03-02 10:11:15','AAY', 'AJU'),
+        (7847396934, '2019-07-27 21:37:45','ABC', 'AJP'),
+        (9662976660, '2018-11-15 04:05:11','ABA', 'AJR'),
+        (7232690949, '2019-05-26 17:45:22','ABE', 'AJL'),
+        (3913039570, '2019-12-25 17:42:23','ABD', 'AJN'),
+        (4691604592, '2018-10-14 03:02:41','ABJ', 'AJF'),
+        (4861350697, '2019-04-29 05:34:27','ABI', 'AJI'),
+        (8133140714, '2019-12-09 19:00:36','ABL', 'AIY'),
+        (5087895519, '2018-09-15 06:52:34','ABK', 'AJA'),
+        (2646525767, '2019-08-15 19:50:04','ABQ', 'AIT'),
+        (5168370741, '2018-12-13 10:46:20','ABM', 'AIU'),
+        (2471034242, '2019-01-18 05:49:14','ABS', 'AIA'),
+        (7877945460, '2018-08-19 07:26:40','ABR', 'AIN'),
+        (1551125422, '2019-08-02 12:01:40','ABV', 'AHS'),
+        (5798431700, '2018-11-21 05:02:52','ABT', 'AHU'),
+        (8701731949, '2019-12-19 07:14:33','ABY', 'AHE'),
+        (2293980477, '2019-01-02 14:12:53','ABX', 'AHO'),
+        (2928610172, '2019-10-08 15:20:52','ACA', 'AHB'),
+        (7326818508, '2019-12-09 21:05:40','ABZ', 'AHC'),
+        (2738473964, '2019-05-23 16:57:29','ACE', 'AGV'),
+        (6852790305, '2019-07-06 02:16:03','ACC', 'AGX'),
+        (8011980260, '2019-05-30 12:00:28','ACI', 'AGT'),
+        (6885144048, '2019-11-01 12:32:13','ACH', 'AGU'),
+        (6724412849, '2018-09-16 23:07:15','ACS', 'AGR'),
+        (5229898830, '2018-07-25 10:18:20','ACK', 'AGS'),
+        (3234935585, '2018-11-04 18:16:06','ACV', 'AGN'),
+        (3825917142, '2019-04-02 14:10:23','ACT', 'AGP'),
+        (3254406978, '2019-04-11 14:36:11','ACZ', 'AGH'),
+        (4863962500, '2018-06-09 17:39:40','ACY', 'AGM'),
+        (4421153741, '2019-09-02 13:40:49','ADB', 'AGA'),
+        (3301850047, '2019-08-03 05:13:06','ADA', 'AGF'),
+        (9414970705, '2019-12-05 04:31:03','ADE', 'AFL'),
+        (2854822059, '2018-10-17 08:20:11','ADD', 'AFT'),
+        (7969470120, '2018-08-21 07:25:35','ADJ', 'AEY'),
+        (5487036665, '2019-09-04 16:34:47','ADF', 'AFA'),
+        (2368864336, '2018-08-29 20:28:53','ADL', 'AET'),
+        (8459832043, '2019-04-29 12:54:21','ADK', 'AEX'),
+        (1834122552, '2019-08-14 09:50:05','ADU', 'AER'),
+        (3597117218, '2019-02-25 09:57:27','ADQ', 'AES'),
+        (9068557385, '2019-07-17 18:34:07','ADZ', 'AEH'),
+        (9903597375, '2019-10-03 22:58:52','ADX', 'AEP');
 
-insert into Plane (PlaneID) 
-    values 
+INSERT INTO Plane (PlaneID) 
+    VALUES 
         (8565718480),
         (2279550654),
         (9333968290),
@@ -526,8 +526,8 @@ insert into Plane (PlaneID)
         (7732963009),
         (3237231388);
 
-insert into PlaneModel (PlaneModelID, CellarNumber) 
-    values 
+INSERT INTO PlaneModel (PlaneModelID, CellarNumber) 
+    VALUES 
         (7664758071, 4),
         (7273350807, 3),
         (5851999050, 4),
@@ -554,8 +554,8 @@ insert into PlaneModel (PlaneModelID, CellarNumber)
         (8186712518, 4),
         (1966946635, 1);
 
-insert into Cellar (CellarID, Capacity)
-    values
+INSERT INTO Cellar (CellarID, Capacity)
+    VALUES
         (6334286344, 144),
         (2222992646, 110),
         (1454232778, 152),
@@ -692,8 +692,8 @@ insert into Cellar (CellarID, Capacity)
         (9494627447, 183),
         (6042766575, 148);
 
-insert into ClientXSuitCase (ClientID, SuitCaseID)
-    values
+INSERT INTO ClientXSuitCase (ClientID, SuitCaseID)
+    VALUES
         (3847890434, 4293130293),
         (8095460455, 3516980415),
         (1409559102, 5085282996),
@@ -895,8 +895,8 @@ insert into ClientXSuitCase (ClientID, SuitCaseID)
         (9863039645, 3913359805),
         (9863039645, 2394000690);
 
-insert into SuitCaseXBagCart (SuitCaseID, BagCartID)
-    values
+INSERT INTO SuitCaseXBagCart (SuitCaseID, BagCartID)
+    VALUES
         (4293130293, 8327752959),
         (3516980415, 9744656333),
         (5085282996, 5996911510),
@@ -1098,8 +1098,8 @@ insert into SuitCaseXBagCart (SuitCaseID, BagCartID)
         (2394000690, 8182787424),
         (3913359805, 6202155236);
 
-insert into FlightXBagCart (BagCartID,FlightID)
-    values
+INSERT INTO FlightXBagCart (BagCartID,FlightID)
+    VALUES
         (8327752959, 5005697948),
         (9744656333, 4495596596),
         (5996911510, 1801778752),
@@ -1201,7 +1201,7 @@ insert into FlightXBagCart (BagCartID,FlightID)
         (8182787424, 9068557385),
         (6202155236, 9903597375);
 
-insert into PlaneXFlight (FlightID, PlaneID)
+INSERT INTO PlaneXFlight (FlightID, PlaneID)
     VALUES 
         (5005697948, 8565718480),
         (4495596596, 2279550654),
