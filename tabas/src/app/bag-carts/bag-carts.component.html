@@ -1,3 +1,41 @@
-<p>
-  bag-carts works!
-</p>
+<app-nav> </app-nav>
+
+<mat-divider></mat-divider>
+
+<div class="buttons" >
+    <a mat-flat-button color ="primary" routerLink="../createBagCarts">Agregar</a>
+    <a mat-flat-button color ="warn" routerLink="../editBagCarts">Editar</a>
+</div>
+
+<mat-divider></mat-divider>
+
+<mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar">
+</mat-form-field>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z9">
+
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID</th>
+        <td mat-cell *matCellDef="let bagCart">{{bagCart.id}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="brand">
+            <th mat-header-cell *matHeaderCellDef> Brand</th>
+            <td mat-cell *matCellDef="let bagCart">{{bagCart.brand}}</td>
+        </ng-container>
+
+    <ng-container matColumnDef="model">
+            <th mat-header-cell *matHeaderCellDef> Model</th>
+            <td mat-cell *matCellDef="let bagCart">{{bagCart.model}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="sec_code">
+            <th mat-header-cell *matHeaderCellDef> Security Code</th>
+            <td mat-cell *matCellDef="let bagCart">{{bagCart.sec_code}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
