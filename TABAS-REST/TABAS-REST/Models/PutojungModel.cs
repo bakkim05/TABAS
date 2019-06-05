@@ -10,19 +10,19 @@ namespace TABAS_REST.Models
     public class PutojungModel
     {
         [DataMember(Name = "name")]
-        public string Nombre { get; set; }
+        public String Nombre { get; set; }
 
         [DataMember(Name = "tel")]
-        public int Tel { get; set; }
+        public Int32 Tel { get; set; }
 
         [DataMember(Name = "correo")]
-        public string Mail { get; set; }
+        public String Mail { get; set; }
 
         [DataMember(Name = "carnet")]
-        public int Carnet { get; set; }
+        public Int32 Carnet { get; set; }
 
         //[DataMember(Name = "apellido")]
-        public string Apellido { get; set; }
+        public String Apellido { get; set; }
 
 
     }

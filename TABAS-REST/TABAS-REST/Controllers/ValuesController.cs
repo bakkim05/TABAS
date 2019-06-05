@@ -17,20 +17,19 @@ namespace TABAS_REST.Controllers
         // GET api/values
         [HttpGet]
         [EnableCors("AllowMyOrigin")]
-        public IEnumerable<string> Get()
+        public ActionResult<IEnumerable<PutojungModel>> Get()
         {
-            //ProcessRequest req = new ProcessRequest();
-            List<PutojungModel> lis = new List<PutojungModel>();
-            PutojungModel jng = new PutojungModel
+            return new[]
             {
-                Nombre = "Puto Jung",
-                Apellido = "kabron",
-                Mail = "Jung@carepicha.com",
-                Tel = 666666666,
-                Carnet = 2015127575                
+                new PutojungModel
+                {
+                    Nombre = "Puto Jung",
+                    Apellido = "kabron",
+                    Mail = "Jung@carepicha.com",
+                    Tel = 666666666,
+                    Carnet = 2015127575
+                }
             };
-            lis.Add(jng);
-            yield return JsonConvert.SerializeObject(jng, Formatting.Indented);
         }
 
         // GET api/values/5
