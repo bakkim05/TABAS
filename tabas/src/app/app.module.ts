@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import {MatButtonModule} from '@angular/material';
 import {MatCheckboxModule} from '@angular/material';
@@ -52,6 +54,7 @@ import { CommsService } from './comms.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
@@ -61,6 +64,7 @@ import { CommsService } from './comms.service';
     HttpClientModule,
     MatCardModule,
     MatFormFieldModule,
+    FormsModule,
   ],
   exports: [
     MatButtonModule,

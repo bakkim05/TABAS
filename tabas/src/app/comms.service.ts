@@ -21,17 +21,20 @@ export class CommsService {
   // }
 
   public getClientes(){
-    // return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/clientes'
-    return this.http.get<any[]>('https://tabas.azurewebsites.net/api/values'
+    return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/clientes');
+    // return this.http.get<any[]>('https://tabas.azurewebsites.net/api/values');
 
-    )
   }
 
   public getMaletas(){
-    return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/maletas')
+    return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/maletas');
   }
 
   public getBagCarts(){
-    return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/bagCarts')
+    return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/bagCarts');
+  }
+
+  public getUsers(){
+    return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/users');
   }
 }

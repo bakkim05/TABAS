@@ -12,7 +12,7 @@ export class MaletasComponent implements OnInit {
   private MALETAS_DATA = []
   private maletasObservable : Observable<any[]>;
 
-  displayedColumns: string[] = ['id','color','weight','cost','state','cliente'];
+  displayedColumns: string[] = ['id','color','weight','cost','state','correo'];
   dataSource = new MatTableDataSource(this.MALETAS_DATA);
 
   applyFilter (filterValue: string){

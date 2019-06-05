@@ -23,6 +23,11 @@
             <td mat-cell *matCellDef="let clientes">{{clientes.nombre}}</td>
         </ng-container>
 
+        <ng-container matColumnDef="apellido">
+            <th mat-header-cell *matHeaderCellDef> Apellido</th>
+            <td mat-cell *matCellDef="let clientes">{{clientes.apellido}}</td>
+        </ng-container>
+
         <ng-container matColumnDef="tel">
             <th mat-header-cell *matHeaderCellDef> Telefono</th>
             <td mat-cell *matCellDef="let clientes">{{clientes.tel}}</td>

@@ -1,3 +1,42 @@
-<p>
-  edit-maletas works!
-</p>
+<mat-toolbar color = "warn">
+  <span>Creación de Maleta</span>
+</mat-toolbar>
+
+<mat-card-content>
+  <form class="my-form">
+    <mat-form-field class="full-width">
+      <mat-label>ID</mat-label>
+      <input  matInput  placeholder="1"  name="id"  required>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Color</mat-label>
+      <input  matInput  placeholder="Rojo" name="color"  required>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Peso</mat-label>
+      <input  matInput  placeholder="15" name="peso"  required>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Costo</mat-label>
+      <input  matInput  placeholder="100" name="costo" required>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Estado</mat-label>
+      <input  matInput  placeholder="Aprovado / Reprovado"  name="carnet" required>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Cliente</mat-label>
+      <input  matInput  placeholder="John Doe"  name="cliente" required>
+    </mat-form-field>
+
+  </form>
+</mat-card-content>
+
+<mat-card-actions class = "actionButtons">
+    <button mat-raised-button routerLink="../maletas" color="warn">CANCELAR</button>
+    <button mat-raised-button (click)="register()" color="primary">EDITAR</button>
+</mat-card-actions>

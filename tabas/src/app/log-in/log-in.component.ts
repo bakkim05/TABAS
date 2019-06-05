@@ -1,4 +1,11 @@
+//import { RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { CommsService} from '../comms.service';
+import { Observable } from 'rxjs';
+import { FormControl, FormsModule } from '@angular/forms';
+import { Router } from "@angular/router"
+
+
 
 @Component({
   selector: 'app-log-in',
@@ -7,7 +14,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogInComponent implements OnInit {
 
-  constructor() { }
+  private username = new FormControl('');
+  private password = new FormControl('');
+
+  private USERS_DATA = []
+  private clientesObservable : Observable<any[]>;
+
+  constructor(private communicationService : CommsService , private router : Router) {
+    this.clientesObservable = this.communicationService.getUsers();
+    this.communicationService.getUsers().subscribe((res : any[])=>{
+      this.USERS_DATA = res;
+      console.log(this.USERS_DATA);
+    })
+
+
+  }
+
+  validate() : void{
+    var user = this.username;
+    var pw = JSON.stringify(this.password.value);
+    var authpw = JSON.stringify(this.USERS_DATA[0][user.value].password)
+
+    if (pw === authpw){
+      this.router.navigate(['home']);
+    }
+  
+  }
+
+
 
   ngOnInit() {
   }
