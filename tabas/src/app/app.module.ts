@@ -8,6 +8,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -57,6 +59,8 @@ import { CommsService } from './comms.service';
     MatInputModule,
     MatDividerModule,
     HttpClientModule,
+    MatCardModule,
+    MatFormFieldModule,
   ],
   exports: [
     MatButtonModule,
@@ -66,6 +70,8 @@ import { CommsService } from './comms.service';
     MatInputModule,
     MatDividerModule,
     HttpClientModule,
+    MatCardModule,
+    MatFormFieldModule,
   ],
   providers: [CommsService],
   bootstrap: [AppComponent]
