@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TABAS_REST.Models;
 using Microsoft.AspNetCore.Cors;
+using Newtonsoft.Json;
 
 namespace TABAS_REST.Controllers
 {
@@ -19,7 +20,17 @@ namespace TABAS_REST.Controllers
         public IEnumerable<string> Get()
         {
             //ProcessRequest req = new ProcessRequest();
-            return new String [] { "{\"nombre\":\"Annmaria Jenicke\",\"tel\": 66136901\",\"correo\":\"ajenicke9@constantcontact.com\",\"carnet\": \"2015735845\"}" } ;//req.request().ToString();
+            List<PutojungModel> lis = new List<PutojungModel>();
+            PutojungModel jng = new PutojungModel
+            {
+                Nombre = "Puto Jung",
+                Apellido = "kabron",
+                Mail = "Jung@carepicha.com",
+                Tel = 666666666,
+                Carnet = 2015127575                
+            };
+            lis.Add(jng);
+            yield return JsonConvert.SerializeObject(jng, Formatting.Indented);
         }
 
         // GET api/values/5
