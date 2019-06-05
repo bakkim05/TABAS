@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import {MatButtonModule} from '@angular/material';
 import {MatCheckboxModule} from '@angular/material';
@@ -25,6 +26,7 @@ import { CreateClientesComponent } from './create-clientes/create-clientes.compo
 import { EditMaletasComponent } from './edit-maletas/edit-maletas.component';
 import { EditBagCartsComponent } from './edit-bag-carts/edit-bag-carts.component';
 import { EditClientesComponent } from './edit-clientes/edit-clientes.component';
+import { CommsService } from './comms.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,7 @@ import { EditClientesComponent } from './edit-clientes/edit-clientes.component';
     CreateClientesComponent,
     EditMaletasComponent,
     EditBagCartsComponent,
-    EditClientesComponent
+    EditClientesComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +56,7 @@ import { EditClientesComponent } from './edit-clientes/edit-clientes.component';
     MatTableModule,
     MatInputModule,
     MatDividerModule,
+    HttpClientModule,
   ],
   exports: [
     MatButtonModule,
@@ -62,8 +65,9 @@ import { EditClientesComponent } from './edit-clientes/edit-clientes.component';
     MatTableModule,
     MatInputModule,
     MatDividerModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [CommsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

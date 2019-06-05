@@ -3,11 +3,14 @@
 <mat-divider></mat-divider>
 
 <div class="buttons" >
+    <!-- <a mat-flat-button color ="warn" (click)="getPosts()">Refresh</a> -->
     <a mat-flat-button color ="primary" routerLink="../createClientes">Agregar</a>
     <a mat-flat-button color ="warn" routerLink="../editClientes">Editar</a>
 </div>
 
 <mat-divider></mat-divider>
+
+
 
 <mat-form-field>
         <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar">
