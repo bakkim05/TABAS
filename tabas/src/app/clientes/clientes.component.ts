@@ -12,7 +12,7 @@ export class ClientesComponent implements OnInit {
   private CLIENTES_DATA = []
   private clientesObservable : Observable<any[]>;
 
-  displayedColumns: string[] = ['nombre','apellido','tel','correo','carnet'];
+  displayedColumns: string[] = ['nombre','apellido','cedula','tel','correo','carnet'];
   dataSource = new MatTableDataSource(this.CLIENTES_DATA);
 
   applyFilter (filterValue: string){

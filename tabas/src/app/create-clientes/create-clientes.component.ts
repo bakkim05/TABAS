@@ -13,6 +13,7 @@ export class CreateClientesComponent implements OnInit {
 
   private nombre = new FormControl('');
   private apellido = new FormControl('');
+  private cedula = new FormControl('');
   private telefono = new FormControl('');
   private correo = new FormControl('');
   private carnet = new FormControl('');
@@ -30,6 +31,7 @@ export class CreateClientesComponent implements OnInit {
     sent.cliente = {};
     sent.cliente.nombre = this.nombre.value;
     sent.cliente.apellido = this.apellido.value;
+    sent.cliente.cedula = parseInt(this.cedula.value);
     sent.cliente.tel = parseInt(this.telefono.value);
     sent.cliente.correo = this.correo.value;
     sent.cliente.carnet = parseInt(this.carnet.value);
