@@ -12,16 +12,16 @@ CREATE TABLE Client (
   FirstName varchar (15),
   LastName varchar (15),
   Email varchar (320),
-  Phone varchar (30),
+  Phone INTEGER,
   Carnet varchar (30)
 );
 
 -- insert listo
 CREATE TABLE SuitCase (
   SuitCaseID bigint PRIMARY KEY NOT NULL,
-  Color varchar (10),
-  Weight bigint,
-  Cost bigint,
+  Color VARCHAR (10),
+  Weight INTEGER,
+  Cost INTEGER,
   State BOOLEAN
 );
 
@@ -29,7 +29,7 @@ CREATE TABLE SuitCase (
 CREATE TABLE BagCart (
   BagCartID bigint PRIMARY KEY NOT NULL,
   Brand varchar (30),
-  Model bigint,
+  Model INTEGER,
   Sec_Code varchar (10)
 );
 

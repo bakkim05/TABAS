@@ -1,0 +1,5 @@
+la llave de los cliente es el id de ellos es un numero de 10 de longitud
+los carnet son varchar de 30 maximo
+el modelo de un bagcart no es algo como civic es el año, eso viene en la especificacion
+el seccode se genera en nulo al crear un bagcart ademas este es un alfanumerico (varchar) de 10 de longitud, al cerrar el bagcart es cuando se genera el seccode
+
