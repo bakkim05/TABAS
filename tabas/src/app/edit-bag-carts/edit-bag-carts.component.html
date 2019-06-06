@@ -6,22 +6,22 @@
   <form class="my-form">
       <mat-form-field class="full-width">
           <mat-label>ID</mat-label>
-          <input matInput placeholder="1" name="id" required>
+          <input matInput placeholder="1" name="id" [formControl]="id" required>
       </mat-form-field>
 
       <mat-form-field class="full-width">
           <mat-label>Marca</mat-label>
-          <input matInput placeholder="Honda" name="marca" required>
+          <input matInput placeholder="Honda" name="marca" [formControl]="marca"required>
       </mat-form-field>
 
       <mat-form-field class="full-width">
           <mat-label>Modelo</mat-label>
-          <input matInput placeholder="Civic" name="modelo" required>
+          <input matInput placeholder="Civic" name="modelo" [formControl]="modelo" required>
       </mat-form-field>
 
       <mat-form-field class="full-width">
           <mat-label>Security Code</mat-label>
-          <input matInput placeholder="0000" name="securityCode" required>
+          <input matInput placeholder="0000" name="securityCode" [formControl]="sec_code" required>
       </mat-form-field>
 
   </form>
@@ -29,5 +29,5 @@
 
 <mat-card-actions class = "actionButtons">
     <button mat-raised-button routerLink="../bagCarts" color="warn">CANCELAR</button>
-    <button mat-raised-button (click)="register()" color="primary">EDITAR</button>
+    <button mat-raised-button (click)="sendPost()" color="primary">EDITAR</button>
 </mat-card-actions>
