@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rebeca Madriz\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj": {}
+    "E:\\Users\\RED\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rebeca Madriz\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj": {
+    "E:\\Users\\RED\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rebeca Madriz\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj",
+        "projectUniqueName": "E:\\Users\\RED\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj",
         "projectName": "TABAS_REST",
-        "projectPath": "C:\\Users\\Rebeca Madriz\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj",
-        "packagesPath": "C:\\Users\\Rebeca Madriz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rebeca Madriz\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\obj\\",
+        "projectPath": "E:\\Users\\RED\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj",
+        "packagesPath": "C:\\Users\\RED\\.nuget\\packages\\",
+        "outputPath": "E:\\Users\\RED\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Rebeca Madriz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\RED\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -56,6 +56,22 @@
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.9, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.0.7, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "SwashBuckle.AspNetCore.MicrosoftExtensions": {
+              "target": "Package",
+              "version": "[0.5.0, )"
             },
             "System.Data.Common": {
               "target": "Package",

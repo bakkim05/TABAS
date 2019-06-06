@@ -11,7 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace TABAS_REST
 {
@@ -27,16 +27,30 @@ namespace TABAS_REST
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowMyOrigin",
                 builder => builder.AllowAnyOrigin());
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
             services.Configure<MvcOptions>(options =>
             {
                 options.Filters.Add(new CorsAuthorizationFilterFactory("AllowMyOrigin"));
             });
+
+            //services.AddSwaggerGen(c =>
+            //{
+            //    c.SwaggerDoc("v1", new Info {
+            //        Title = "Core API",
+            //        Description = "Swagger"
+            //    });
+            //}
+            //);
+            
+        
+                
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +69,12 @@ namespace TABAS_REST
 
             app.UseHttpsRedirection();
             app.UseMvc();
+            //app.UseSwagger();
+            //app.UseSwagger(c =>
+            //{
+            //    c.
+            //}
+            //    );
         }
     }
 }
