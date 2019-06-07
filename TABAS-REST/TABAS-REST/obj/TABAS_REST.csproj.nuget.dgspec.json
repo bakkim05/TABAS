@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Users\\RED\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj": {}
+    "C:\\Users\\krojas96\\source\\repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj": {}
   },
   "projects": {
-    "E:\\Users\\RED\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj": {
+    "C:\\Users\\krojas96\\source\\repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\RED\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj",
+        "projectUniqueName": "C:\\Users\\krojas96\\source\\repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj",
         "projectName": "TABAS_REST",
-        "projectPath": "E:\\Users\\RED\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj",
-        "packagesPath": "C:\\Users\\RED\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\RED\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\obj\\",
+        "projectPath": "C:\\Users\\krojas96\\source\\repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj",
+        "packagesPath": "C:\\Users\\krojas96\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\krojas96\\source\\repos\\TABAS\\TABAS-REST\\TABAS-REST\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\RED\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\krojas96\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,10 +64,6 @@
             "Npgsql": {
               "target": "Package",
               "version": "[4.0.7, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
-              "target": "Package",
-              "version": "[2.2.4, )"
             },
             "SwashBuckle.AspNetCore.MicrosoftExtensions": {
               "target": "Package",

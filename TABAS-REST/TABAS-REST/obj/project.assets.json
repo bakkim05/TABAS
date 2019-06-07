@@ -12747,23 +12747,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RED\\.nuget\\packages\\": {},
+    "C:\\Users\\krojas96\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Users\\RED\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj",
+      "projectUniqueName": "C:\\Users\\krojas96\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj",
       "projectName": "TABAS_REST",
-      "projectPath": "E:\\Users\\RED\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj",
-      "packagesPath": "C:\\Users\\RED\\.nuget\\packages\\",
-      "outputPath": "E:\\Users\\RED\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\obj\\",
+      "projectPath": "C:\\Users\\krojas96\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\TABAS_REST.csproj",
+      "packagesPath": "C:\\Users\\krojas96\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\krojas96\\Source\\Repos\\TABAS\\TABAS-REST\\TABAS-REST\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\RED\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\krojas96\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

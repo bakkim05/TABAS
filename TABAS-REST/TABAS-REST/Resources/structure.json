@@ -1,106 +1,86 @@
-// Creacion de Maletas
+// Creacion de Maletas - /bags - POST
 
 {
-	"code": "crearMaletas",
-	"maleta": {
-		"id": 1,
-		"color": "Rojo",
-		"peso": 10,
-		"costo": 100,
-		"estado": "aprovado",
-		"correo": "correo@correo.com"
-	}
+    "id": 1,
+    "color": "Rojo",
+    "peso": 10,
+    "costo": 100,
+    "estado": "aprovado",
+    "correo": "correo@correo.com"
+  }
 }
 
-// Edicion de Maletas
-
+// Edicion de Maletas - /bags - PUT
 {
-	"code": "editMaletas",
-	"maleta": {
-		"id": 1,
-		"color": "Rojo",
-		"peso": 10,
-		"costo": 100,
-		"estado": "aprovado",
-		"correo": "correo@correo.com"
-	}
+    "id": 1,
+    "color": "Rojo",
+    "peso": 10,
+    "costo": 100,
+    "estado": "aprovado",
+    "correo": "correo@correo.com"
 }
 
-// Creacion de Clientes
+// Creacion de Clientes - /clients - POST cédula??
 
 {
-	"code": "crearClientes",
-	"cliente": {
-		"nombre": "Bob",
-		"apellido": "Gugu",
-		"tel": 8989126613,
-		"correo": "correo@correo.com",
-		"carnet": 2012345678
+  "nombre": "Bob",
+  "apellido": "Gugu",
+  "tel": 8989126613,
+  "correo": "correo@correo.com",
+  "carnet": 2012345678
 
-	}
+} }
+
+// Edicion de Clientes - /clients - PUT / qué campos se editan? a qué cédula lo pongo? cómo identifico cual usuario voy a actualizar?
+
+{
+  "nombre": "Bob",
+  "apellido": "Gugu",
+  "tel": 8989126613,
+  "correo": "correo@correo.com",
+  "carnet": 2012345678
 }
 
-// Edicion de Clientes
+// Creacion de BagCart - /BagCart - POST
 
 {
-	"code": "editClientes",
-	"cliente": {
-		"nombre": "Bob",
-		"apellido": "Gugu",
-		"tel": 8989126613,
-		"correo": "correo@correo.com",
-		"carnet": 2012345678
-
-	}
+  "id": 1,
+  "marca": "Honda",
+  "modelo": "Civic",
+  "sec_code": 1515
 }
 
-// Creacion de BagCart
+// Edicion de BagCart - /BagCart -PUT
 
 {
-	"code": "crearBagCarts",
-	"bagCart": {
-		"id": 1,
-		"marca": "Honda",
-		"modelo": "Civic",
-		"sec_code": 1515
-	}
-}
-
-// Edicion de BagCart
-
-{
-	"code": "editBagCarts",
-	"bagCart": {
-		"id": 1,
-		"marca": "Honda",
-		"modelo": "Civic",
-		"sec_code": 1515
-	}
+  "id": 1,
+  "marca": "Honda",
+  "modelo": "Civic",
+  "sec_code": 1515
 }
 
 
 
-// Usuarios
+// Usuarios - /employees  - POST?? - GET??
 
-[{
-    "admin": {
-        "password": "admin"
-    },
-    "jung": {
-        "password": "bak"
-    }
-}]
+[
+  {
+    "user": "admin",
+    "password": "admin"
+  },
+  {
+    "user": "jung",
+    "password": "bak"
+  }
+]
 
 
-// Registrar Usuario
+// Registrar - /employees -POST
 
 {
-	"code": "registrarUsuario",
-	"bagCart": {
-		"nombre": "John",
-		"apellido": "Doe",
-		"rol": 1,
-		"username": "JohnDoe",
-		"password": "contrasena",
-	}
-}
+  "nombre": "John",
+  "apellido": "Doe",
+  "rol": 1,
+  "username": "JohnDoe",
+  "password": "contrasena",
+} }
