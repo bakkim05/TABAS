@@ -27,11 +27,18 @@ namespace TABAS_REST
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            /**
+             * CORS permiter procesar solicitudes fuera del dominio del servidor REST
+             * se implementa dada la necesidad de procesar solicitudes fuera de dominio.
+             */
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowMyOrigin",
                 builder => builder.AllowAnyOrigin());
+                options.AddPolicy("AllowMyOrigin",
+                builder => builder.AllowAnyMethod());
+                options.AddPolicy("AllowMyOrigin",
+                builder => builder.AllowAnyHeader());
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
