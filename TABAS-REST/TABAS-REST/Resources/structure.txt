@@ -7,7 +7,7 @@
     "costo": 100,
     "estado": "aprovado",
     "correo": "correo@correo.com"
-  }
+  
 }
 
 // Edicion de Maletas - /bags - PUT

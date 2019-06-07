@@ -43,6 +43,17 @@ namespace TABAS_REST.Models
 
         // tablas - POSTGRE
         public const string CLIENT = "client ";
+
+        //BagCart Jung
+        public const string CART_ID = "id";
+        public const string CART_MARCA = "marca";
+        public const string CART_MODELO = "modelo";
+        public const string CART_SEC_CODE = "sec_code";
+
+        // BagCart Nicko
+
+
+
         //public const string s = "";
         //public const string s = "";
     }
