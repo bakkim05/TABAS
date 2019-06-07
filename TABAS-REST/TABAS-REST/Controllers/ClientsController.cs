@@ -29,6 +29,7 @@ namespace TABAS_REST.Controllers
 
         // POST: api/Users
         [HttpPost]
+        [EnableCors("AllowMyOrigin")]
         public void Post([FromBody] UserModel value)
         {
             new ProcessRequest().UserControllerPost(value);
