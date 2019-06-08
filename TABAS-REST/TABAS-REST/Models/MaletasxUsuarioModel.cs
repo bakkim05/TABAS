@@ -21,6 +21,6 @@ namespace TABAS_REST.Models
 
 
         [DataMember(Name = CONSTANTS.CANT_MALETAS)]
-        public Int16 Maletas { get; set; }
+        public string Maletas { get; set; }
     }
 }

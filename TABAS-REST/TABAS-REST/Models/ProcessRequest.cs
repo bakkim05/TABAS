@@ -311,7 +311,7 @@ namespace TABAS_REST.Models
                             Nombre = reader.GetString(0),
                             Apellido = reader.GetString(1),
                             Cedula = reader.GetInt64(2),
-                            Maletas = reader.GetInt16(3),
+                            Maletas = reader.GetInt16(3).ToString(),
                             //Destino = reader.GetString(3),
                             //Estado =reader.GetBoolean(4)
                         });
