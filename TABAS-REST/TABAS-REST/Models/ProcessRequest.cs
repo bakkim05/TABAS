@@ -268,18 +268,19 @@ namespace TABAS_REST.Models
                 conn.Open();
 
                 // Retrieve all rows
-                using (var cmd = new NpgsqlCommand("SELECT * FROM flight", conn))
+                using (var cmd = new NpgsqlCommand("SELECT * FROM planexflight", conn))
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
                         lis.Add(new FlightModelcs
                         {
-                            Id = reader.GetInt64(0),
-                            Partida = reader.GetTimeStamp(1).ToString(),
-                            Origen = reader.GetString(2),
-                            Destino = reader.GetString(3),
-                            Estado =reader.GetBoolean(4)
+                            IdVuelo= reader.GetInt64(0),
+                            IdAvion = reader.GetInt64(1),
+                            //Partida = reader.GetTimeStamp(1).ToString(),
+                            //Origen = reader.GetString(2),
+                            //Destino = reader.GetString(3),
+                            //Estado =reader.GetBoolean(4)
                         });
                     }
                 }

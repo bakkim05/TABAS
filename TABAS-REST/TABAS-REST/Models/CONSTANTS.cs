@@ -102,6 +102,7 @@ namespace TABAS_REST.Models
         public const string FL_ORIGEN = "origin";
         public const string FL_DESTINO = "destiny";
         public const string FL_ESTADO = "state";
+        public const string PLANE_ID = "planeid";
 
     }
 }
