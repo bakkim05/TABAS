@@ -72,7 +72,7 @@ namespace TABAS_REST
 
             app.UseHttpsRedirection();
             app.UseMvc();
-            //app.UseCors("AllowMyOrigin");
+            app.UseCors("AllowMyOrigin");
             //app.UseSwagger();
             //app.UseSwagger(c =>
             //{
