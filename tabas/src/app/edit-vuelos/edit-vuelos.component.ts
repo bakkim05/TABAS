@@ -22,9 +22,9 @@ export class EditVuelosComponent implements OnInit {
   createJSON(){
     var sent : any = {};
 
-    sent.bagCart = {};
-    sent.bagCart.vuelo = parseInt(this.vuelo.value);
-    sent.bagCart.avion = parseInt(this.avion.value);
+    sent.vuelos = {};
+    sent.vuelos.vuelo = parseInt(this.vuelo.value);
+    sent.vuelos.avion = parseInt(this.avion.value);
 
     return sent;
   }
