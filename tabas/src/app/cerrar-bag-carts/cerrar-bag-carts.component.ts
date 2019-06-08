@@ -23,7 +23,7 @@ export class CerrarBagCartsComponent implements OnInit {
 
     var jsonPost = {"id":parseInt(this.id.value)};
 
-    this.http.delete("https://tabas.azurewebsites.net/api/bagCart",jsonPost)
+    this.http.put("https://tabas.azurewebsites.net/api/bagCart",jsonPost)
       .toPromise()
       .then(data => {
         console.log(data);

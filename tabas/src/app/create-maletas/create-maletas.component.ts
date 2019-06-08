@@ -31,9 +31,9 @@ export class CreateMaletasComponent implements OnInit {
    */
   sendPost(){
 
-    var jsonPost = {"id":parseInt(this.id.value), "color":this.color.value,
+    var jsonPost = {"bagID":parseInt(this.id.value), "color":this.color.value,
                     "peso":parseInt(this.peso.value),"costo":parseInt(this.costo.value),
-                    "estado":this.estado.value, "cedula":this.cedula.value, "bagCart":parseInt(this.bagCart.value)};
+                    "estado":this.estado.value, "clientid":this.cedula.value, "id":parseInt(this.bagCart.value)};
 
     this.http.post("https://tabas.azurewebsites.net/api/maletas",jsonPost)
       .toPromise()

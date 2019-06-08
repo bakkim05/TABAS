@@ -39,15 +39,15 @@ export class CommsService {
   }
 
   public getVuelos(){
-    return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/vuelos');
+    return this.http.get<any[]>('https://tabas.azurewebsites.net/api/vuelos');
   }
 
   public getReportClientes(){
-    return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/vuelos');
+    return this.http.get<any[]>('https://tabas.azurewebsites.net/api/bags/users');
   }
 
   public getReportMaletas(){
-    return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/vuelos');
+    return this.http.get<any[]>('https://tabas.azurewebsites.net/api/bags/conciliacion');
   }
 
 }

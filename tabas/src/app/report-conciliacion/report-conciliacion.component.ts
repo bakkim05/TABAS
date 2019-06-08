@@ -13,7 +13,7 @@ export class ReportConciliacionComponent implements OnInit {
   private CONCILIACION_DATA = []
   private conciliacionObservable : Observable<any[]>;
 
-  displayedColumns: string[] = ['numVuelo','tipoAvion','capacidad','totalMaletas','totalEnBagCart','totalEnAvion','rechazadas'];
+  displayedColumns: string[] = ['numvuelo','tipoavion','capacidad','maletasbagcart','maletasavion'];
   dataSource = new MatTableDataSource(this.CONCILIACION_DATA);
 
   applyFilter (filterValue: string){

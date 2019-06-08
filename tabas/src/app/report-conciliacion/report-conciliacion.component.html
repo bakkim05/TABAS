@@ -9,14 +9,14 @@
     
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z9">
         
-        <ng-container matColumnDef="numVuelo">
+        <ng-container matColumnDef="numvuelo">
             <th mat-header-cell *matHeaderCellDef> Número de Vuelo</th>
-            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.numVuelo}}</td>
+            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.numvuelo}}</td>
         </ng-container>
 
-        <ng-container matColumnDef="tipoAvion">
+        <ng-container matColumnDef="tipoavion">
             <th mat-header-cell *matHeaderCellDef> Tipo de Avión</th>
-            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.tipoAvion}}</td>
+            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.tipoavion}}</td>
         </ng-container>
 
         <ng-container matColumnDef="capacidad">
@@ -24,24 +24,14 @@
             <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.capacidad}}</td>
         </ng-container>
 
-        <ng-container matColumnDef="totalMaletas">
-            <th mat-header-cell *matHeaderCellDef> Total de Maletas</th>
-            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.totalMaletas}}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="totalEnBagCart">
+        <ng-container matColumnDef="maletasbagcart">
             <th mat-header-cell *matHeaderCellDef> Total de Maletas en Bag Cart</th>
-            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.totalEnBagCart}}</td>
+            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.maletasbagcart}}</td>
         </ng-container>
 
-        <ng-container matColumnDef="totalEnAvion">
+        <ng-container matColumnDef="maletasavion">
             <th mat-header-cell *matHeaderCellDef> Total de Maletas en el Avión</th>
-            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.totalEnAvion}}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="rechazadas">
-            <th mat-header-cell *matHeaderCellDef> Rechazadas</th>
-            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.rechazadas}}</td>
+            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.maletasavion}}</td>
         </ng-container>
 
     
