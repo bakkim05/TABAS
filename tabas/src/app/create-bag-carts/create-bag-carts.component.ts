@@ -30,8 +30,9 @@ export class CreateBagCartsComponent implements OnInit {
      * Construye los headers necesarios para el REST service
      */
 
-    var jsonPost = {"id":parseInt(this.id.value), "marca":this.marca.value, "modelo":parseInt(this.modelo.value),"vuelo":parseInt(this.vuelo.value)};
-    this.http.post("https://tabas.azurewebsites.net/api/bagCarts",jsonPost)
+    var jsonPost = {"id":parseInt(this.id.value),"marca":this.marca.value,
+                    "modelo":parseInt(this.modelo.value),"vuelo":parseInt(this.vuelo.value)};
+    this.http.post("https://tabas.azurewebsites.net/api/bagCart",jsonPost)
       .toPromise()
       .then(data => {
         console.log(data);

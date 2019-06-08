@@ -23,31 +23,13 @@ export class EditClientesComponent implements OnInit {
   ngOnInit() {
   }
 
-  createJSON(){
-    var sent : any = {};
-
-    sent.cliente = {};
-    sent.cliente.nombre = this.nombre.value;
-    sent.cliente.apellido = this.apellido.value;
-    sent.cliente.cedula = parseInt(this.cedula.value);
-    sent.cliente.tel = this.telefono.value;
-    sent.cliente.correo = this.correo.value;
-    sent.cliente.carnet = this.carnet.value;
-
-    return sent;
-  }
 
   sendPost(){
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type' : 'application/json',
-        'Access-Control-Allow-Origin' : '*',
-        'Access-Control-Allow-Headers' : 'Content-Type',
-        'Access-Control-Allow-Methods' : 'GET, POST, PUT, DELETE, OPTIONS'
-      })
-    };
 
-    this.http.post("http://httpbin.org/post",this.createJSON(),httpOptions)
+
+    var jsonPost = {"nombre":this.nombre.value, "apellido":this.apellido.value, "cedula":parseInt(this.cedula.value),"tel":parseInt(this.telefono.value),"correo":this.correo.value, "carnet":this.carnet.value}
+
+    this.http.put("https://tabas.azurewebsites.net/api/clients",jsonPost)
       .toPromise()
       .then(data => {
         console.log(data);

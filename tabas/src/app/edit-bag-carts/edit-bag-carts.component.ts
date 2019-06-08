@@ -22,29 +22,12 @@ export class EditBagCartsComponent implements OnInit {
   ngOnInit() {
   }
 
-  createJSON(){
-    var sent : any = {};
-
-    sent.bagCart = {};
-    sent.bagCart.id = parseInt(this.id.value);
-    sent.bagCart.marca = this.marca.value;
-    sent.bagCart.modelo = parseInt(this.modelo.value);
-    sent.bagCart.vuelo = parseInt(this.vuelo.value);
-
-    return sent;
-  }
 
   sendPost(){
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type' : 'application/json',
-        'Access-Control-Allow-Origin' : '*',
-        'Access-Control-Allow-Headers' : 'Content-Type',
-        'Access-Control-Allow-Methods' : 'GET, POST, PUT, DELETE, OPTIONS'
-      })
-    };
 
-    this.http.post("http://httpbin.org/post",this.createJSON(),httpOptions)
+    var jsonPost = {"id":parseInt(this.id.value),"marca":this.marca.value,
+                    "modelo":parseInt(this.modelo.value),"vuelo":parseInt(this.vuelo.value)};
+    this.http.put("https://tabas.azurewebsites.net/api/bagCart",jsonPost)
       .toPromise()
       .then(data => {
         console.log(data);

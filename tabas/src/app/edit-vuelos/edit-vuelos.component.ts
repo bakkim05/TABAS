@@ -19,27 +19,12 @@ export class EditVuelosComponent implements OnInit {
   ngOnInit() {
   }
 
-  createJSON(){
-    var sent : any = {};
-
-    sent.vuelos = {};
-    sent.vuelos.vuelo = parseInt(this.vuelo.value);
-    sent.vuelos.avion = parseInt(this.avion.value);
-
-    return sent;
-  }
 
   sendPost(){
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type' : 'application/json',
-        'Access-Control-Allow-Origin' : '*',
-        'Access-Control-Allow-Headers' : 'Content-Type',
-        'Access-Control-Allow-Methods' : 'GET, POST, PUT, DELETE, OPTIONS'
-      })
-    };
 
-    this.http.post("http://httpbin.org/post",this.createJSON(),httpOptions)
+    var jsonPost = {"vuelo":parseInt(this.vuelo.value), "avion":parseInt(this.avion.value)};
+
+    this.http.put("https://tabas.azurewebsites.net/api/vuelos",jsonPost)
       .toPromise()
       .then(data => {
         console.log(data);

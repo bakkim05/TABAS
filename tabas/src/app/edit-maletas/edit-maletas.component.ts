@@ -24,32 +24,13 @@ export class EditMaletasComponent implements OnInit {
   ngOnInit() {
   }
 
-  createJSON(){
-    var sent : any = {};
-    
-    sent.maleta = {};
-    sent.maleta.id = parseInt(this.id.value);
-    sent.maleta.color = this.color.value;
-    sent.maleta.peso = parseInt(this.peso.value);
-    sent.maleta.costo = parseInt(this.costo.value);
-    sent.maleta.estado = this.estado.value;
-    sent.maleta.cedula = this.cedula.value;
-    sent.maleta.bagCart = parseInt(this.bagCart.value);
-
-    return sent;
-  }
-
   sendPost(){
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type' : 'application/json',
-        'Access-Control-Allow-Origin' : '*',
-        'Access-Control-Allow-Headers' : 'Content-Type',
-        'Access-Control-Allow-Methods' : 'GET, POST, PUT, DELETE, OPTIONS'
-      })
-    };
 
-    this.http.post("http://httpbin.org/post",this.createJSON(),httpOptions)
+    var jsonPost = {"id":parseInt(this.id.value), "color":this.color.value,
+                    "peso":parseInt(this.peso.value),"costo":parseInt(this.costo.value),
+                    "estado":this.estado.value, "cedula":this.cedula.value, "bagCart":parseInt(this.bagCart.value)};
+
+    this.http.put("https://tabas.azurewebsites.net/api/maletas",jsonPost)
       .toPromise()
       .then(data => {
         console.log(data);
