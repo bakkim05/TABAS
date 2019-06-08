@@ -34,7 +34,7 @@ export class CreateMaletasComponent implements OnInit {
     sent.maleta.peso = parseInt(this.peso.value);
     sent.maleta.costo = parseInt(this.costo.value);
     sent.maleta.estado = this.estado.value;
-    sent.maleta.correo = this.cedula.value;
+    sent.maleta.cedula = this.cedula.value;
 
     return sent;
   }

@@ -25,8 +25,6 @@ export class EditBagCartsComponent implements OnInit {
   createJSON(){
     var sent : any = {};
 
-    sent.code = "editBagCarts";
-
     sent.bagCart = {};
     sent.bagCart.id = parseInt(this.id.value);
     sent.bagCart.marca = this.marca.value;

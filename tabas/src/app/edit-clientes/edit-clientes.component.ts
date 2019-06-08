@@ -26,16 +26,13 @@ export class EditClientesComponent implements OnInit {
   createJSON(){
     var sent : any = {};
 
-    sent.code = "editClientes";
-
     sent.cliente = {};
     sent.cliente.nombre = this.nombre.value;
     sent.cliente.apellido = this.apellido.value;
     sent.cliente.cedula = parseInt(this.cedula.value);
-    sent.cliente.tel = parseInt(this.telefono.value);
+    sent.cliente.tel = this.telefono.value;
     sent.cliente.correo = this.correo.value;
-    sent.cliente.carnet = parseInt(this.carnet.value);
-
+    sent.cliente.carnet = this.carnet.value;
 
     return sent;
   }

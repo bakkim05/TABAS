@@ -25,9 +25,7 @@ export class EditMaletasComponent implements OnInit {
 
   createJSON(){
     var sent : any = {};
-
-    sent.code = "crearMaletas";
-
+    
     sent.maleta = {};
     sent.maleta.id = parseInt(this.id.value);
     sent.maleta.color = this.color.value;
