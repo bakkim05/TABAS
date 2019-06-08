@@ -5,16 +5,14 @@ import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from "@angular/common/http";
 
 @Component({
-  selector: 'app-create-bag-carts',
-  templateUrl: './create-bag-carts.component.html',
-  styleUrls: ['./create-bag-carts.component.css']
+  selector: 'app-edit-vuelos',
+  templateUrl: './edit-vuelos.component.html',
+  styleUrls: ['./edit-vuelos.component.css']
 })
-export class CreateBagCartsComponent implements OnInit {
+export class EditVuelosComponent implements OnInit {
 
-  private id = new FormControl('');
-  private marca = new FormControl('');
-  private modelo = new FormControl('');
-
+  private vuelo = new FormControl('');
+  private avion = new FormControl('');
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -25,9 +23,8 @@ export class CreateBagCartsComponent implements OnInit {
     var sent : any = {};
 
     sent.bagCart = {};
-    sent.bagCart.id = parseInt(this.id.value);
-    sent.bagCart.marca = this.marca.value;
-    sent.bagCart.modelo = this.modelo.value;
+    sent.bagCart.vuelo = parseInt(this.vuelo.value);
+    sent.bagCart.avion = parseInt(this.avion.value);
 
     return sent;
   }
@@ -48,7 +45,7 @@ export class CreateBagCartsComponent implements OnInit {
         console.log(data);
       });
 
-    // this.router.navigate(['clientes']);
+    // this.router.navigate(['vuelos']);
   }
 
 }

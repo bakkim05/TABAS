@@ -31,6 +31,10 @@ import { EditMaletasComponent } from './edit-maletas/edit-maletas.component';
 import { EditBagCartsComponent } from './edit-bag-carts/edit-bag-carts.component';
 import { EditClientesComponent } from './edit-clientes/edit-clientes.component';
 import { CommsService } from './comms.service';
+import { VuelosComponent } from './vuelos/vuelos.component';
+import { CerrarBagCartsComponent } from './cerrar-bag-carts/cerrar-bag-carts.component';
+import { CreateVuelosComponent } from './create-vuelos/create-vuelos.component';
+import { EditVuelosComponent } from './edit-vuelos/edit-vuelos.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +53,10 @@ import { CommsService } from './comms.service';
     EditMaletasComponent,
     EditBagCartsComponent,
     EditClientesComponent,
+    VuelosComponent,
+    CerrarBagCartsComponent,
+    CreateVuelosComponent,
+    EditVuelosComponent,
   ],
   imports: [
     BrowserModule,
