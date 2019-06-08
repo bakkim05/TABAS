@@ -14,7 +14,6 @@ export class CreateBagCartsComponent implements OnInit {
   private id = new FormControl('');
   private marca = new FormControl('');
   private modelo = new FormControl('');
-  private sec_code = new FormControl('');
 
 
   constructor(private http: HttpClient, private router: Router) { }
@@ -31,7 +30,6 @@ export class CreateBagCartsComponent implements OnInit {
     sent.bagCart.id = parseInt(this.id.value);
     sent.bagCart.marca = this.marca.value;
     sent.bagCart.modelo = this.modelo.value;
-    sent.bagCart.sec_code = parseInt(this.sec_code.value);
 
     return sent;
   }

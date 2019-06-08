@@ -21,8 +21,8 @@ export class CommsService {
   // }
 
   public getClientes(){
-    return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/clientes');
-    // return this.http.get<any[]>('https://tabas.azurewebsites.net/api/values');
+    // return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/clientes');
+    return this.http.get<any[]>('https://tabas.azurewebsites.net/api/clients');
 
   }
 
