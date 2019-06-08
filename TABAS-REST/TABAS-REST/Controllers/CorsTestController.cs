@@ -32,6 +32,13 @@ namespace TABAS_REST.Controllers
             return value;
         }
 
+        // POST: api/CorsTest
+        [HttpPost]
+        public string Post1( string value)
+        {
+            return value;
+        }
+
         // PUT: api/CorsTest/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
