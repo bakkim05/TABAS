@@ -30,7 +30,18 @@ namespace TABAS_REST.Controllers
 
         // POST: api/Users
         [HttpPost]
-        public ActionResult<IEnumerable<UserModel>> Post([FromForm] String p_Value)
+        [Consumes("application/json")]
+        public ActionResult<IEnumerable<UserModel>> Post([FromBody] UserModel value)
+        {
+            //UserModel value = JsonConvert.DeserializeObject<UserModel>(p_Value);
+            new ProcessRequest().UserControllerPost(value);
+            return new List<UserModel>() { value };
+        }
+        
+        // POST: api/Users
+        [HttpPost]
+        [Consumes("application/x-www-form-urlencoded")]
+        public ActionResult<IEnumerable<UserModel>> Post([FromForm] string p_Value)
         {
             UserModel value = JsonConvert.DeserializeObject<UserModel>(p_Value);
             new ProcessRequest().UserControllerPost(value);
