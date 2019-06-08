@@ -27,5 +27,10 @@ namespace TABAS_REST.Models
 
         [DataMember(Name = CONSTANTS.BAG_USER)]
         public Int64 UserID { get; set; }
+
+        [DataMember(Name = CONSTANTS.CART_ID)]
+        public Int64 CartID { get; set; }
+
+
     }
 }

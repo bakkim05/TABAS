@@ -201,8 +201,11 @@ namespace TABAS_REST.Models
                 conn.Open();
 
                 // Retrieve all rows
-                using (var cmd = new NpgsqlCommand("SELECT * FROM suitcase", conn))
-                using (var reader = cmd.ExecuteReader())
+                using (var cmd = new NpgsqlCommand("SELECT suitcase.*, suitcasexbagcart.bagcartid, clientxsuitcase.clientid  " +
+                                                    "FROM suitcase, suitcasexbagcart, clientxsuitcase" +
+                                                    "WHERE suitcase.suitcaseid=suitcasexbagcart.suitcaseid and suitcase.suitcaseid=clientxsuitcase.suitcaseid" +
+                                                    "ORDER BY clientxsuitcase.clientid", conn))
+                using (var reader = cmd.ExecuteReader()) 
                 {
                     while (reader.Read())
                     {
@@ -213,15 +216,57 @@ namespace TABAS_REST.Models
                             Peso = reader.GetInt32(2),
                             Costo = reader.GetInt32(3),
                             Estado = reader.GetBoolean(4),
-                            //UserID = reader.GetInt64(5)
+                            CartID = reader.GetInt64(5),
+                            UserID = reader.GetInt64(6)
                         });
+
                     }
                 }
+
+                
+                
+
                 conn.Close();
                 //Console.WriteLine(reader.GetString(0));
 
             }
             return lis;
+        }
+
+        /**
+         * Procesa las solicutudes post al registrar un usuario
+         */
+        public void BagControllerPost(BagModel pBag)
+        {
+            using (var conn = new NpgsqlConnection(CONSTANTS.CONN_STR_POSTGRE_SQL))
+            {
+                conn.Open();
+
+                // Insert some data
+                using (var cmd = new NpgsqlCommand())
+                {
+                    cmd.Connection = conn;
+
+                    cmd.CommandText = "INSERT INTO bagcart (bagcartid, brand, model) VALUES (@a, @b, @c)";
+                    cmd.Parameters.AddWithValue("a", pCart.Id);
+                    cmd.Parameters.AddWithValue("b", pCart.Marca);
+                    cmd.Parameters.AddWithValue("c", pCart.Modelo);
+                    //cmd.Parameters.AddWithValue("d", pCart.SecCode);
+
+                    cmd.ExecuteNonQuery();
+                }
+                using (var cmd = new NpgsqlCommand())
+                {
+                    cmd.Connection = conn;
+
+                    cmd.CommandText = "INSERT INTO flightxbagcart (bagcartid, flightid) VALUES (@a, @b)";
+                    cmd.Parameters.AddWithValue("a", pCart.Id);
+                    cmd.Parameters.AddWithValue("b", pCart.Vuelo);
+
+                    cmd.ExecuteNonQuery();
+                }
+                conn.Close();
+            }
         }
 
         public List<EmployeeModel> EmployeeControllerGet()
@@ -291,7 +336,9 @@ namespace TABAS_REST.Models
             return lis;
         }
 
-
+        /**
+         * Despliega las maletas que posee cada usuario
+         */
         public List<MaletasxUsuarioModel> MaletaXusuarioGet()
         {
             List<MaletasxUsuarioModel> lis = new List<MaletasxUsuarioModel>();
@@ -311,7 +358,7 @@ namespace TABAS_REST.Models
                             Nombre = reader.GetString(0),
                             Apellido = reader.GetString(1),
                             Cedula = reader.GetInt64(2),
-                            Maletas = reader.GetInt16(3).ToString(),
+                            Maletas = reader.GetInt16(3)
                             //Destino = reader.GetString(3),
                             //Estado =reader.GetBoolean(4)
                         });
