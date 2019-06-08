@@ -176,7 +176,7 @@ namespace TABAS_REST.Models
                             Peso = reader.GetInt32(2),
                             Costo = reader.GetInt32(3),
                             Estado = reader.GetBoolean(4),
-                            UserID = reader.GetInt64(5)
+                            //UserID = reader.GetInt64(5)
                         });
                     }
                 }
@@ -206,9 +206,9 @@ namespace TABAS_REST.Models
                             Nombre = reader.GetString(0),
                             Apellido = reader.GetString(1),
                             Cedula = reader.GetInt64(2),
-                            User = reader.GetString(3),
-                            Password = reader.GetString(4),
-                            //UserID = reader.GetInt64(5)
+                            Rol = reader.GetString(3),
+                            User = reader.GetString(4),
+                            Password = reader.GetString(5)
                         });
                     }
                 }

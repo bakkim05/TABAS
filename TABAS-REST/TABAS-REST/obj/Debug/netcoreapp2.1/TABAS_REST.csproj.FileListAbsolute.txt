@@ -53,3 +53,4 @@ C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\obj\Debug\netcor
 C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS_REST.RazorTargetAssemblyInfo.cache
 C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS_REST.dll
 C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS_REST.pdb
+C:\Users\Rebeca Madriz\Source\Repos\TABAS\TABAS-REST\TABAS-REST\obj\Debug\netcoreapp2.1\TABAS_REST.csprojAssemblyReference.cache
