@@ -96,6 +96,13 @@ namespace TABAS_REST.Models
         public const string PSQL_EMPL_PWD = EMPL_PWD;
         public const string PSQL_EMPL_ID = "id_number";
 
+        // Vuelo
+        public const string FL_ID = "flightid";
+        public const string FL_PARTIDA = "departure_date";
+        public const string FL_ORIGEN = "origin";
+        public const string FL_DESTINO = "destiny";
+        public const string FL_ESTADO = "state";
+
     }
 }
 

@@ -124,9 +124,9 @@ namespace TABAS_REST.Models
         /**
          * Retorna todos los bagcarts
          */
-        public List<BagCartModel> BagCartControllerGet()
+        public List<VuelosModel> BagCartControllerGet()
         {
-            List<BagCartModel> lis = new List<BagCartModel>();
+            List<VuelosModel> lis = new List<VuelosModel>();
 
             using (var conn = new NpgsqlConnection(CONSTANTS.CONN_STR_POSTGRE_SQL))
             {
@@ -138,7 +138,7 @@ namespace TABAS_REST.Models
                 {
                     while (reader.Read())
                     {
-                        lis.Add(new BagCartModel
+                        lis.Add(new VuelosModel
                         {
                             Id = reader.GetInt64(0),
                             Marca = reader.GetString(1),
@@ -156,7 +156,7 @@ namespace TABAS_REST.Models
         /**
          * Procesa las solicutudes post al registrar un usuario
          */
-        public void BagCartControllerPost(BagCartModel pCart)
+        public void BagCartControllerPost(VuelosModel pCart)
         {
             using (var conn = new NpgsqlConnection(CONSTANTS.CONN_STR_POSTGRE_SQL))
             {
@@ -246,6 +246,40 @@ namespace TABAS_REST.Models
                             Rol = reader.GetString(3),
                             User = reader.GetString(4),
                             Password = reader.GetString(5)
+                        });
+                    }
+                }
+                conn.Close();
+                //Console.WriteLine(reader.GetString(0));
+
+            }
+            return lis;
+        }
+
+        /**
+         * Retorna todos los bagcarts
+         */
+        public List<FlightModelcs> VuelosControllerGet()
+        {
+            List<FlightModelcs> lis = new List<FlightModelcs>();
+
+            using (var conn = new NpgsqlConnection(CONSTANTS.CONN_STR_POSTGRE_SQL))
+            {
+                conn.Open();
+
+                // Retrieve all rows
+                using (var cmd = new NpgsqlCommand("SELECT * FROM flight", conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        lis.Add(new FlightModelcs
+                        {
+                            Id = reader.GetInt64(0),
+                            Partida= reader.GetString(1),
+                            Origen = reader.GetString(2),
+                            Destino = reader.GetString(3),
+                            Estado =reader.GetBoolean(4)
                         });
                     }
                 }

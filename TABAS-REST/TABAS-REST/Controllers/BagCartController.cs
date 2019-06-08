@@ -14,7 +14,7 @@ namespace TABAS_REST.Controllers
     {
         // GET: api/BagCart
         [HttpGet]
-        public ActionResult<IEnumerable<BagCartModel>> Get()
+        public ActionResult<IEnumerable<VuelosModel>> Get()
         {
             return new ProcessRequest().BagCartControllerGet();
         }
@@ -28,7 +28,7 @@ namespace TABAS_REST.Controllers
 
         // POST: api/BagCart
         [HttpPost]
-        public void Post([FromBody] BagCartModel value)
+        public void Post([FromBody] VuelosModel value)
         {
             new ProcessRequest().BagCartControllerPost(value);
 

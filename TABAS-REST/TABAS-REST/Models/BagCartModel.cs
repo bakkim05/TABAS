@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace TABAS_REST.Models
 {
     [DataContract]
-    public class BagCartModel
+    public class VuelosModel
     {
         [DataMember(Name = CONSTANTS.CART_ID)]
         public Int64 Id { get; set; }
