@@ -36,7 +36,7 @@ namespace TABAS_REST
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowMyOrigin",
-                builder => builder.AllowAnyOrigin().AllowAnyMethod());
+                builder => builder.AllowAnyOrigin());
 
                 });
                 services.Configure<MvcOptions>(options =>
