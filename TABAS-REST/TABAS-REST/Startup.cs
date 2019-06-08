@@ -33,13 +33,13 @@ namespace TABAS_REST
              */
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            //services.AddCors(options =>
-            //{
-            //    options.AddPolicy("AllowMyOrigin",
-            //    builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowAnyMethod());
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowMyOrigin",
+                builder => builder.AllowAnyOrigin());
 
-            //});
-            services.Configure<MvcOptions>(options =>
+                });
+                services.Configure<MvcOptions>(options =>
             {
                 options.Filters.Add(new CorsAuthorizationFilterFactory("AllowMyOrigin"));
             });
