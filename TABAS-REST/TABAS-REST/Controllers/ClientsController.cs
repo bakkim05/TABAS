@@ -30,7 +30,7 @@ namespace TABAS_REST.Controllers
 
         // POST: api/Users
         [HttpPost]
-        public ActionResult<IEnumerable<UserModel>> Post([FromBody] UserModel value)
+        public ActionResult<IEnumerable<UserModel>> Post([FromForm] UserModel value)
         {
             new ProcessRequest().UserControllerPost(value);
             return new List<UserModel>() { value };
