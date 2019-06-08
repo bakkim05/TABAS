@@ -18,26 +18,12 @@ export class CerrarBagCartsComponent implements OnInit {
   ngOnInit() {
   }
 
-  createJSON(){
-    var sent : any = {};
-
-    sent.bagCart = {};
-    sent.bagCart.id = parseInt(this.id.value);
-
-    return sent;
-  }
 
   sendPost(){
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type' : 'application/json',
-        'Access-Control-Allow-Origin' : '*',
-        'Access-Control-Allow-Headers' : 'Content-Type',
-        'Access-Control-Allow-Methods' : 'GET, POST, PUT, DELETE, OPTIONS'
-      })
-    };
 
-    this.http.post("http://httpbin.org/post",this.createJSON(),httpOptions)
+    var jsonPost = {"id":parseInt(this.id.value)};
+
+    this.http.delete("https://tabas.azurewebsites.net/api/bagCart",jsonPost)
       .toPromise()
       .then(data => {
         console.log(data);

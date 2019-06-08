@@ -33,7 +33,7 @@ export class EditBagCartsComponent implements OnInit {
         console.log(data);
       });
 
-    // this.router.navigate(['clientes']);
+    this.router.navigate(['bagCarts']);
   }
 
 }

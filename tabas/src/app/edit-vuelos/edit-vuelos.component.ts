@@ -30,7 +30,7 @@ export class EditVuelosComponent implements OnInit {
         console.log(data);
       });
 
-    // this.router.navigate(['vuelos']);
+    this.router.navigate(['vuelos']);
   }
 
 }
