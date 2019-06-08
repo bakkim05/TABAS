@@ -167,11 +167,11 @@ namespace TABAS_REST.Models
                 {
                     cmd.Connection = conn;
 
-                    cmd.CommandText = "INSERT INTO bagcart (bagcartid, brand, model, sec_code) VALUES (@a, @b, @c, @d)";
+                    cmd.CommandText = "INSERT INTO bagcart (bagcartid, brand, model) VALUES (@a, @b, @c)";
                     cmd.Parameters.AddWithValue("a", pCart.Id);
                     cmd.Parameters.AddWithValue("b", pCart.Marca);
                     cmd.Parameters.AddWithValue("c", pCart.Modelo);
-                    cmd.Parameters.AddWithValue("d", pCart.SecCode);
+                    //cmd.Parameters.AddWithValue("d", pCart.SecCode);
 
                     cmd.ExecuteNonQuery();
                 }

@@ -15,7 +15,7 @@ namespace TABAS_REST.Models
         [DataMember(Name = CONSTANTS.CART_MODELO)]
         public Int32 Modelo { get; set; }
 
-        [DataMember(Name = CONSTANTS.CART_SEC_CODE)]
+        //[DataMember(Name = CONSTANTS.CART_SEC_CODE)]
         public String SecCode { get; set; }
 
 
