@@ -40,7 +40,8 @@ CREATE TABLE Flight (
   FlightID bigint PRIMARY KEY NOT NULL,
   Departure_Date timestamp,
   Origin varchar (30),
-  Destiny varchar
+  Destiny varchar,
+  State BOOLEAN
 );
 
 -- creacion de la tabla aviones
@@ -62,17 +63,19 @@ CREATE TABLE Cellar (
 
 -- creacion de la tabla de reportes de maleta
 CREATE TABLE ReportSuitcase (
-  ReportID BIGINT PRIMARY KEY NOT NULL,
+  ReportID SERIAL PRIMARY KEY NOT NULL,
+  FlightID BIGINT,
   TypeID BIGINT,
   Capacity INTEGER,
   SuitCasesOnPlane INTEGER,
   SuitCasesOnFlight INTEGER,
-  SuitCasesOnBagCart INTEGER
+  SuitCasesOnBagCart INTEGER,
+  Banned INTEGER
 );
 
 -- creacion de la tabla de maletas rechazadas
 CREATE TABLE Banned (
-  BannedSuitCaseID BIGINT PRIMARY KEY NOT NULL
+  BannedSuitCaseID SERIAL PRIMARY KEY NOT NULL
 );
 
 -- creacion de la tabla relacion vuelo-reporte
