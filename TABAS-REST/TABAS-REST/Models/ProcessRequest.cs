@@ -201,37 +201,34 @@ namespace TABAS_REST.Models
                 conn.Open();
 
                 // Retrieve all rows
-                using (var cmd = new NpgsqlCommand("SELECT suitcase.*, suitcasexbagcart.bagcartid, clientxsuitcase.clientid  " +
-                                                    "FROM suitcase, suitcasexbagcart, clientxsuitcase" +
-                                                    "WHERE suitcase.suitcaseid=suitcasexbagcart.suitcaseid and suitcase.suitcaseid=clientxsuitcase.suitcaseid" +
-                                                    "ORDER BY clientxsuitcase.clientid", conn))
-                using (var reader = cmd.ExecuteReader()) 
+                using (var cmd = new NpgsqlCommand("SELECT suitcase.*, suitcasexbagcart.bagcartid, clientxsuitcase.clientid FROM suitcase, suitcasexbagcart, clientxsuitcase WHERE suitcase.suitcaseid=suitcasexbagcart.suitcaseid and suitcase.suitcaseid=clientxsuitcase.suitcaseid ORDER BY clientxsuitcase.clientid",conn))
                 {
-                    while (reader.Read())
+                    using (var reader = cmd.ExecuteReader())
                     {
-                        lis.Add(new BagModel
+                        while (reader.Read())
                         {
-                            Id = reader.GetInt64(0),
-                            Color = reader.GetString(1),
-                            Peso = reader.GetInt32(2),
-                            Costo = reader.GetInt32(3),
-                            Estado = reader.GetBoolean(4),
-                            CartID = reader.GetInt64(5),
-                            UserID = reader.GetInt64(6)
-                        });
+                            lis.Add(new BagModel
+                            {
+                                Id = reader.GetInt64(0),
+                                Color = reader.GetString(1),
+                                Peso = reader.GetInt32(2),
+                                Costo = reader.GetInt32(3),
+                                Estado = reader.GetBoolean(4),
+                                CartID = reader.GetInt64(5),
+                                UserID = reader.GetInt64(6)
+                            });
 
+                        }
                     }
                 }
 
-                
-                
-
                 conn.Close();
-                //Console.WriteLine(reader.GetString(0));
-
             }
             return lis;
         }
+            
+                //Console.WriteLine(reader.GetString(0));
+
 
         /**
          * Procesa las solicutudes post al registrar un usuario

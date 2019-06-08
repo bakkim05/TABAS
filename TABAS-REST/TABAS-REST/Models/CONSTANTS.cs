@@ -65,7 +65,7 @@ namespace TABAS_REST.Models
 
         //Bag - Jung
 
-        public const string BAG_ID = CART_ID;
+        public const string BAG_ID = "bagID";
         public const string BAG_COLOR = "color";
         public const string BAG_PESO = "peso";
         public const string BAG_COSTO = "costo";
