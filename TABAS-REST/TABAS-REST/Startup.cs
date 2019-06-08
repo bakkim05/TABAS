@@ -60,9 +60,6 @@ namespace TABAS_REST
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-
-            app.UseCors("AllowMyOrigin");
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -75,8 +72,6 @@ namespace TABAS_REST
             app.UseHttpsRedirection();
             app.UseMvc();
             app.UseCors("AllowMyOrigin");
-            app.UseCors("AllowMyMethod");
-            app.UseCors("AllowMyHeader");
             //app.UseSwagger();
             //app.UseSwagger(c =>
             //{
