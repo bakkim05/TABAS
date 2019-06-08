@@ -32,7 +32,7 @@ namespace TABAS_REST.Controllers
         [HttpPost]
         public ActionResult<IEnumerable<UserModel>> Post([FromBody] UserModel value)
         {
-            //new ProcessRequest().UserControllerPost(value);
+            new ProcessRequest().UserControllerPost(value);
             return new List<UserModel>() { value };
         }
 
