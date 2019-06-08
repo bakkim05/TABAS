@@ -103,3 +103,62 @@ BEGIN
 	FROM Usuarios
 END
 GO
+/*
+-- ===========================================================
+-- Create database ddl trigger template for Azure SQL Database
+-- =========================================================== 
+-- Drop the database ddl trigger if it already exists
+IF EXISTS(
+  SELECT *
+    FROM sys.triggers
+   WHERE name = N'<trigger_name, sysname, table_alter_drop_safety>'
+     AND parent_class_desc = N'DATABASE'
+)
+	DROP TRIGGER only_1admin ON database
+GO
+
+CREATE TRIGGER <only_1admin> ON database
+after insert 
+AS 
+BEGIN
+   declare jaja int= select idRol from Usuarios;
+   if(jaja==1){
+	todelete= select NumCed from inserted
+	delete * from Usuarios
+	where Usuarios.NumCed=inserted.NumCed
+   }
+END
+GO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
