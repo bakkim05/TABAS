@@ -21,3 +21,17 @@ CREATE PROCEDURE insert_bagcart(id BIGINT, brand VARCHAR (30), model INTEGER)
                 VALUES
                     (id, brand, model, NULL);
         $$;
+
+CREATE PROCEDURE asignar_maleta(id_maleta BIGINT, id_bagcart BIGINT)
+    LANGUAGE SQL
+        AS $$
+            INSERT INTO SuitCaseXBagCart (SuitCaseID, BagCartID)
+                VALUES
+                    (id_maleta, id_bagcart)
+        $$;
+
+CREATE PROCEDURE update_maleta(id_maleta BIGINT, estado BOOLEAN)
+    LANGUAGE SQL
+        AS $$
+            UPDATE SuitCase SET State = estado WHERE SuitCaseID = id_maleta;
+        $$
