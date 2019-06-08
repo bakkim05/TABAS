@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TABAS_REST.Models;
 
 namespace TABAS_REST.Controllers
 {
@@ -13,9 +14,9 @@ namespace TABAS_REST.Controllers
     {
         // GET: api/BagCart
         [HttpGet]
-        public IEnumerable<string> Get()
+        public ActionResult<IEnumerable<BagCartModel>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new ProcessRequest().BagCartControllerGet();
         }
 
         // GET: api/BagCart/5

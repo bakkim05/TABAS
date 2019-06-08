@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TABAS_REST.Models;
 
 namespace TABAS_REST.Controllers
 {
@@ -13,9 +14,9 @@ namespace TABAS_REST.Controllers
     {
         // GET: api/Employees
         [HttpGet]
-        public IEnumerable<string> Get()
+        public ActionResult<IEnumerable<EmployeeModel>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new ProcessRequest().EmployeeControllerGet();
         }
 
         // GET: api/Employees/5

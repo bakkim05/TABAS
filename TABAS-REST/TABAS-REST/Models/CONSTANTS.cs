@@ -17,6 +17,10 @@ namespace TABAS_REST.Models
 
         public const string NUM_CED = "NUM_CED";
 
+        // Requests Postrgres
+        public const string COMMAND_SQL_SELECT_ALL_USERS = @"SELECT * FROM Usuarios;";
+        public const string COMMAND_PSQL_SELECT_ALL_USERS = "SELECT * FROM client";
+
         //misc
         public const string L_PAR = "( ";
         public const string R_PAR = " )";
@@ -48,13 +52,49 @@ namespace TABAS_REST.Models
         public const string CART_ID = "id";
         public const string CART_MARCA = "marca";
         public const string CART_MODELO = "modelo";
-        public const string CART_SEC_CODE = "sec_code";
+        //public const string CART_SEC_CODE = "sec_code";
 
         // BagCart Nicko
+        public const string PSQL_CART_ID = "bagcartid";
+        public const string PSQL_CART_MARCA = "brand";
+        public const string PSQL_CART_MODELO = "model";
+        //public const string PSQL_CART_SEC_CODE = "sec_code";
 
+        //Bag - Jung
 
+        public const string BAG_ID = CART_ID;
+        public const string BAG_COLOR = "color";
+        public const string BAG_PESO = "peso";
+        public const string BAG_COSTO = "costo";
+        public const string BAG_ESTADO = "estado";
+        public const string BAG_USER = PSQL_CEDULA;
 
-        //public const string s = "";
-        //public const string s = "";
+        //Bag - Nicko
+        public const string PSQL_BAG_ID = "suitcaseid";
+        public const string PSQL_BAG_COLOR = BAG_COLOR;
+        public const string PSQL_BAG_PESO = "weight";
+        public const string PSQL_BAG_COSTO = "cost";
+        public const string PSQL_BAG_ESTADO = "estado";
+        public const string PSQL_BAG_USER = CEDULA;
+
+        //Employee - Jung
+        public const string EMPL_NOMBRE = NOMBRE;
+        public const string EMPL_APELLIDO = APELLIDO;
+        public const string EMPL_ID = CEDULA;
+        public const string EMPL_ROL = "rol";
+        public const string EMPL_USER = "username";
+        public const string EMPL_PWD = "password";
+
+        //Employee - Nicko
+        public const string PSQL_EMPL_NOMBRE = NOMBRE;
+        public const string PSQL_EMPL_APELLIDO = APELLIDO;
+        public const string PSQL_EMPL_ROL = EMPL_ROL;
+        public const string PSQL_EMPL_USER = EMPL_USER;
+        public const string PSQL_EMPL_PWD = EMPL_PWD;
+        public const string PSQL_EMPL_ID = "id_number";
+
     }
 }
+
+        //public const string s = "";
+        //public const string s = "";

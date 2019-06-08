@@ -16,8 +16,7 @@ namespace TABAS_REST.Models
             {
                 using (var command = conn.CreateCommand())
                 {
-                    command.CommandText = @"SELECT * 
-                        FROM Usuarios;";
+                    command.CommandText = CONSTANTS.COMMAND_SQL_SELECT_ALL_USERS;
                     conn.Open();
                     using (var reader = command.ExecuteReader())
                     {
@@ -34,7 +33,7 @@ namespace TABAS_REST.Models
         }
 
         /**
-         * Procesa los get alconsultar a todos los usuarios.
+         * Procesa los get al consultar a todos los usuarios.
          * 
          */
         public List<UserModel> UsersControllerGet()
@@ -46,7 +45,7 @@ namespace TABAS_REST.Models
                 conn.Open();
 
                 // Retrieve all rows
-                using (var cmd = new NpgsqlCommand("SELECT * FROM client", conn))
+                using (var cmd = new NpgsqlCommand(CONSTANTS.COMMAND_PSQL_SELECT_ALL_USERS, conn))
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
@@ -61,11 +60,12 @@ namespace TABAS_REST.Models
                             Carnet = reader.GetString(5)
                         });
                     }
-                    return lis;
                 }
                 //Console.WriteLine(reader.GetString(0));
 
+                conn.Close();
             }
+            return lis;
         }
 
         /**
@@ -117,7 +117,106 @@ namespace TABAS_REST.Models
 
                     cmd.ExecuteNonQuery();
                 }
+                conn.Close();
             }
+        }
+        
+        /**
+         * Retorna todos los bagcarts
+         */
+        public List<BagCartModel> BagCartControllerGet()
+        {
+            List<BagCartModel> lis = new List<BagCartModel>();
+
+            using (var conn = new NpgsqlConnection(CONSTANTS.CONN_STR_POSTGRE_SQL))
+            {
+                conn.Open();
+
+                // Retrieve all rows
+                using (var cmd = new NpgsqlCommand("SELECT * FROM bagcart", conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        lis.Add(new BagCartModel
+                        {
+                            Id = reader.GetInt64(0),
+                            Marca = reader.GetString(1),
+                            Modelo = reader.GetInt32(2)
+                        });
+                    }
+                }
+                conn.Close();
+                //Console.WriteLine(reader.GetString(0));
+
+            }
+            return lis;
+        }
+        /**
+         * Retorna todas las maletas enlistadas en el sistema
+         */
+        public List<BagModel> BagControllerGet()
+        {
+            List<BagModel> lis = new List<BagModel>();
+
+            using (var conn = new NpgsqlConnection(CONSTANTS.CONN_STR_POSTGRE_SQL))
+            {
+                conn.Open();
+
+                // Retrieve all rows
+                using (var cmd = new NpgsqlCommand("SELECT * FROM suitcase", conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        lis.Add(new BagModel
+                        {
+                            Id = reader.GetInt64(0),
+                            Color = reader.GetString(1),
+                            Peso = reader.GetInt32(2),
+                            Costo = reader.GetInt32(3),
+                            Estado = reader.GetBoolean(4),
+                            //UserID = reader.GetInt64(5)
+                        });
+                    }
+                }
+                conn.Close();
+                //Console.WriteLine(reader.GetString(0));
+
+            }
+            return lis;
+        }
+
+        public List<EmployeeModel> EmployeeControllerGet()
+        {
+            List<EmployeeModel> lis = new List<EmployeeModel>();
+
+            using (var conn = new NpgsqlConnection(CONSTANTS.CONN_STR_POSTGRE_SQL))
+            {
+                conn.Open();
+
+                // Retrieve all rows
+                using (var cmd = new NpgsqlCommand("SELECT * FROM employee", conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        lis.Add(new EmployeeModel
+                        {
+                            Nombre = reader.GetString(0),
+                            Apellido = reader.GetString(1),
+                            Cedula = reader.GetInt64(2),
+                            User = reader.GetString(3),
+                            Password = reader.GetString(4),
+                            //UserID = reader.GetInt64(5)
+                        });
+                    }
+                }
+                conn.Close();
+                //Console.WriteLine(reader.GetString(0));
+
+            }
+            return lis;
         }
 
     }

@@ -5,7 +5,7 @@
     "color": "Rojo",
     "peso": 10,
     "costo": 100,
-    "estado": "aprovado",
+    "estado": "aprobado",
     "correo": "correo@correo.com"
   
 }
@@ -16,7 +16,7 @@
     "color": "Rojo",
     "peso": 10,
     "costo": 100,
-    "estado": "aprovado",
+    "estado": "aprobado",
     "correo": "correo@correo.com"
 }
 
