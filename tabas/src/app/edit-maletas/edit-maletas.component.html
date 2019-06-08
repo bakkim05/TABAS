@@ -25,13 +25,18 @@
 
     <mat-form-field class="full-width">
       <mat-label>Estado</mat-label>
-      <input  matInput  placeholder="Aprovado / Reprovado"  name="carnet" [formControl]="estado" >
+      <input  matInput  placeholder="Aprovabo / Reprobado"  name="carnet" [formControl]="estado" >
     </mat-form-field>
 
     <mat-form-field class="full-width">
       <mat-label>Cedula</mat-label>
       <input  matInput  placeholder="1411235978"  name="cedula" [formControl]="cedula" >
     </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <mat-label>ID Bag Cart</mat-label>
+        <input  matInput  placeholder="1"  name="bagCart" [formControl]="bagCart" >
+      </mat-form-field>
 
   </form>
 </mat-card-content>

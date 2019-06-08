@@ -17,6 +17,7 @@ export class EditMaletasComponent implements OnInit {
   private costo = new FormControl('');
   private estado = new FormControl('');
   private cedula = new FormControl('');
+  private bagCart = new FormControl('');
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -33,6 +34,7 @@ export class EditMaletasComponent implements OnInit {
     sent.maleta.costo = parseInt(this.costo.value);
     sent.maleta.estado = this.estado.value;
     sent.maleta.cedula = this.cedula.value;
+    sent.maleta.bagCart = parseInt(this.bagCart.value);
 
     return sent;
   }
