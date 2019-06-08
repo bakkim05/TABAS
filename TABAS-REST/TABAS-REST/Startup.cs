@@ -35,12 +35,6 @@ namespace TABAS_REST
             {
                 options.AddPolicy("AllowMyOrigin",
                 builder => builder.AllowAnyOrigin());
-
-                options.AddPolicy("AllowMyMethod",
-                builder => builder.AllowAnyMethod());
-
-                options.AddPolicy("AllowMyHeader",
-                builder => builder.AllowAnyHeader());
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
@@ -67,8 +61,6 @@ namespace TABAS_REST
         {
 
             app.UseCors("AllowMyOrigin");
-            app.UseCors("AllowMyMethod");
-            app.UseCors("AllowMyHeader");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

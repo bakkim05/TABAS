@@ -30,10 +30,10 @@ namespace TABAS_REST.Controllers
 
         // POST: api/Users
         [HttpPost]
-        [EnableCors("AllowMyOrigin")]
-        public void Post([FromBody] UserModel value)
+        public ActionResult<IEnumerable<UserModel>> Post([FromBody] UserModel value)
         {
-            new ProcessRequest().UserControllerPost(value);
+            //new ProcessRequest().UserControllerPost(value);
+            return new List<UserModel>() { value };
         }
 
         // PUT: api/Users/5
