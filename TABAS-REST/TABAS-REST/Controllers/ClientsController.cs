@@ -12,6 +12,7 @@ namespace TABAS_REST.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("AllowMyOrigin")]
     public class ClientsController : ControllerBase
     {
         // GET: api/Users
