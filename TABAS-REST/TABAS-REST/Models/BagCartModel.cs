@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Threading.Tasks;
 
 namespace TABAS_REST.Models
 {
@@ -18,7 +15,12 @@ namespace TABAS_REST.Models
         [DataMember(Name = CONSTANTS.CART_MODELO)]
         public Int32 Modelo { get; set; }
 
-        //[DataMember(Name = CONSTANTS.CART_SEC_CODE)]
-        //public String SecCode { get; set; }
+        [DataMember(Name = CONSTANTS.CART_SEC_CODE)]
+        public String SecCode { get; set; }
+
+
+        [DataMember(Name = CONSTANTS.CART_VUELO)]
+        public Int64 Vuelo { get; set; }
+
     }
 }

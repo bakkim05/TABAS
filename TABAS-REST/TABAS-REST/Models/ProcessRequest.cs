@@ -152,6 +152,43 @@ namespace TABAS_REST.Models
             }
             return lis;
         }
+
+        /**
+         * Procesa las solicutudes post al registrar un usuario
+         */
+        public void BagCartControllerPost(BagCartModel pCart)
+        {
+            using (var conn = new NpgsqlConnection(CONSTANTS.CONN_STR_POSTGRE_SQL))
+            {
+                conn.Open();
+
+                // Insert some data
+                using (var cmd = new NpgsqlCommand())
+                {
+                    cmd.Connection = conn;
+
+                    cmd.CommandText = "INSERT INTO bagcart (bagcartid, brand, model, sec_code) VALUES (@a, @b, @c, @d)";
+                    cmd.Parameters.AddWithValue("a", pCart.Id);
+                    cmd.Parameters.AddWithValue("b", pCart.Marca);
+                    cmd.Parameters.AddWithValue("c", pCart.Modelo);
+                    cmd.Parameters.AddWithValue("d", pCart.SecCode);
+
+                    cmd.ExecuteNonQuery();
+                }
+                using (var cmd = new NpgsqlCommand())
+                {
+                    cmd.Connection = conn;
+
+                    cmd.CommandText = "INSERT INTO flightxbagcart (bagcartid, flightid) VALUES (@a, @b)";
+                    cmd.Parameters.AddWithValue("a", pCart.Id);
+                    cmd.Parameters.AddWithValue("b", pCart.Vuelo);
+
+                    cmd.ExecuteNonQuery();
+                }
+                conn.Close();
+            }
+        }
+
         /**
          * Retorna todas las maletas enlistadas en el sistema
          */

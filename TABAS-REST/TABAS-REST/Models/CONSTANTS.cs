@@ -52,6 +52,9 @@ namespace TABAS_REST.Models
         public const string CART_ID = "id";
         public const string CART_MARCA = "marca";
         public const string CART_MODELO = "modelo";
+        public const string CART_VUELO = "vuelo";
+        //public const string CART_AVION = "avion";
+
         //public const string CART_SEC_CODE = "sec_code";
 
         // BagCart Nicko
