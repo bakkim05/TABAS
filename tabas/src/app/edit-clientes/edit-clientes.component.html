@@ -4,34 +4,35 @@
 
 <mat-card-content>
    <form class="my-form">
+
+      <mat-form-field class="full-width">
+         <mat-label>Cedula</mat-label>
+         <input  matInput  placeholder="14100012" name="cedula"  [formControl]="cedula" required>
+      </mat-form-field>
+            
       <mat-form-field class="full-width">
         <mat-label>Nombre</mat-label>
-        <input  matInput  placeholder="John"  name="nombre"  [formControl]="nombre" required>
+        <input  matInput  placeholder="John"  name="nombre"  [formControl]="nombre" >
      </mat-form-field>
 
      <mat-form-field class="full-width">
         <mat-label>Apellido</mat-label>
-        <input  matInput  placeholder="Doe" name="apellido"  [formControl]="apellido" required>
-     </mat-form-field>
-
-     <mat-form-field class="full-width">
-        <mat-label>Cedula</mat-label>
-        <input  matInput  placeholder="14100012" name="cedula"  [formControl]="cedula" required>
+        <input  matInput  placeholder="Doe" name="apellido"  [formControl]="apellido" >
      </mat-form-field>
 
      <mat-form-field class="full-width">
         <mat-label>Telefono</mat-label>
-        <input  matInput  placeholder="89897413" name="telefono" [formControl]="telefono" required>
+        <input  matInput  placeholder="89897413" name="telefono" [formControl]="telefono" >
      </mat-form-field>
 
      <mat-form-field class="full-width">
         <mat-label>Correo</mat-label>
-        <input  matInput  placeholder="correo@correo.com" name="correo" [formControl]="correo" required>
+        <input  matInput  placeholder="correo@correo.com" name="correo" [formControl]="correo" >
      </mat-form-field>
 
      <mat-form-field class="full-width">
         <mat-label>Carnet</mat-label>
-        <input  matInput  placeholder="201515359388"  name="carnet" [formControl]="carnet" required>
+        <input  matInput  placeholder="201515359388"  name="carnet" [formControl]="carnet" >
      </mat-form-field>
 
 <mat-card-actions class = "actionButtons">
