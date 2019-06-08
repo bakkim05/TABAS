@@ -276,7 +276,7 @@ namespace TABAS_REST.Models
                         lis.Add(new FlightModelcs
                         {
                             Id = reader.GetInt64(0),
-                            Partida= reader.GetString(1),
+                            Partida = reader.GetTimeStamp(1).ToString(),
                             Origen = reader.GetString(2),
                             Destino = reader.GetString(3),
                             Estado =reader.GetBoolean(4)
