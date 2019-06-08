@@ -247,11 +247,12 @@ namespace TABAS_REST.Models
                 {
                     cmd.Connection = conn;
 
-                    cmd.CommandText = "INSERT INTO bagcart (bagcartid, brand, model) VALUES (@a, @b, @c)";
-                    cmd.Parameters.AddWithValue("a", pCart.Id);
-                    cmd.Parameters.AddWithValue("b", pCart.Marca);
-                    cmd.Parameters.AddWithValue("c", pCart.Modelo);
-                    //cmd.Parameters.AddWithValue("d", pCart.SecCode);
+                    cmd.CommandText = "INSERT INTO suitcase (suitcaseid, color, weight, cost, state) VALUES (@a, @b, @c, @d, @e)";
+                    cmd.Parameters.AddWithValue("a", pBag.Id);
+                    cmd.Parameters.AddWithValue("b", pBag.Color);
+                    cmd.Parameters.AddWithValue("c", pBag.Peso);
+                    cmd.Parameters.AddWithValue("d", pBag.Costo);
+                    cmd.Parameters.AddWithValue("e", pBag.Estado);
 
                     cmd.ExecuteNonQuery();
                 }
@@ -259,9 +260,19 @@ namespace TABAS_REST.Models
                 {
                     cmd.Connection = conn;
 
-                    cmd.CommandText = "INSERT INTO flightxbagcart (bagcartid, flightid) VALUES (@a, @b)";
-                    cmd.Parameters.AddWithValue("a", pCart.Id);
-                    cmd.Parameters.AddWithValue("b", pCart.Vuelo);
+                    cmd.CommandText = "INSERT INTO suitcasexbagcart (suitcaseid, bagcartid) VALUES (@a, @b)";
+                    cmd.Parameters.AddWithValue("a", pBag.Id);
+                    cmd.Parameters.AddWithValue("b", pBag.CartID);
+
+                    cmd.ExecuteNonQuery();
+                }
+                using (var cmd = new NpgsqlCommand())
+                {
+                    cmd.Connection = conn;
+
+                    cmd.CommandText = "INSERT INTO suitcasexbagcart (suitcaseid, clientid) VALUES (@a, @b)";
+                    cmd.Parameters.AddWithValue("a", pBag.Id);
+                    cmd.Parameters.AddWithValue("b", pBag.UserID);
 
                     cmd.ExecuteNonQuery();
                 }
