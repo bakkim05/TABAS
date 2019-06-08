@@ -14,7 +14,7 @@ namespace TABAS_REST.Models
         public String Nombre { get; set; }
 
         [DataMember(Name = CONSTANTS.TELEFONO)]
-        public String Tel { get; set; }
+        public Int64 Tel { get; set; }
 
         [DataMember(Name = CONSTANTS.CORREO)]
         public String Mail { get; set; }

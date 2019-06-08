@@ -26,7 +26,7 @@ namespace TABAS_REST.Controllers
                     Nombre = "Puto Jung",
                     Apellido = "kabron",
                     Mail = "Jung@carepicha.com",
-                    Tel = "666666666",
+                    Tel = 666666666,
                     Carnet = "2015127575"
                 }
             };

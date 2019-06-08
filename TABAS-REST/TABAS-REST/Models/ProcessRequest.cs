@@ -56,7 +56,7 @@ namespace TABAS_REST.Models
                             Nombre = reader.GetString(1),
                             Apellido = reader.GetString(2),
                             Mail = reader.GetString(3),
-                            Tel = reader.GetString(4),
+                            Tel = reader.GetInt64(4),
                             Carnet = reader.GetString(5)
                         });
                     }
