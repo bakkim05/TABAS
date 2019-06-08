@@ -31,26 +31,10 @@ namespace TABAS_REST.Controllers
 
         // POST: api/Users
         [HttpPost]
-        public ActionResult<IEnumerable<UserModel>> Post([FromForm] UserModel value)
+        public ActionResult<IEnumerable<UserModel>> Post([FromBody] UserModel value)
         {
             //UserModel value = JsonConvert.DeserializeObject<UserModel>(p_Value);
-            new ProcessRequest().UserControllerPost(value);
-            return new List<UserModel>() { value };
-        }
-
-        [HttpPost]
-        public ActionResult<IEnumerable<UserModel>> Post1([FromBody] UserModel value)
-        {
-            //UserModel value = JsonConvert.DeserializeObject<UserModel>(p_Value);
-            new ProcessRequest().UserControllerPost(value);
-            return new List<UserModel>() { value };
-        }
-
-        [HttpPost]
-        public ActionResult<IEnumerable<UserModel>> Post2([FromQuery] UserModel value)
-        {
-            //UserModel value = JsonConvert.DeserializeObject<UserModel>(p_Value);
-            new ProcessRequest().UserControllerPost(value);
+            //new ProcessRequest().UserControllerPost(value);
             return new List<UserModel>() { value };
         }
 
