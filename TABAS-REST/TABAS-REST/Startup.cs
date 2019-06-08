@@ -31,18 +31,19 @@ namespace TABAS_REST
              * CORS permiter procesar solicitudes fuera del dominio del servidor REST
              * se implementa dada la necesidad de procesar solicitudes fuera de dominio.
              */
+            
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowMyOrigin",
                 builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowAnyMethod().AllowCredentials());
 
             });
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
             services.Configure<MvcOptions>(options =>
             {
                 options.Filters.Add(new CorsAuthorizationFilterFactory("AllowMyOrigin"));
             });
+
 
             //services.AddSwaggerGen(c =>
             //{
