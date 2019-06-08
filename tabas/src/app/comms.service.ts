@@ -27,15 +27,15 @@ export class CommsService {
   }
 
   public getMaletas(){
-    return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/maletas');
+    return this.http.get<any[]>('https://tabas.azurewebsites.net/api/bags');
   }
 
   public getBagCarts(){
-    return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/bagCarts');
+    return this.http.get<any[]>('https://tabas.azurewebsites.net/api/bagCart');
   }
 
   public getUsers(){
-    return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/users');
+    return this.http.get<any[]>('https://tabas.azurewebsites.net/api/employees');
   }
 
   public getVuelos(){

@@ -12,7 +12,7 @@ export class BagCartsComponent implements OnInit {
 private BAGCART_DATA = []
 private bagCartObservable : Observable<any[]>;
 
-  displayedColumns: string[] = ['id','brand','model','sec_code', 'vuelo'];
+  displayedColumns: string[] = ['id','marca','modelo','sec_code', 'vuelo'];
   dataSource = new MatTableDataSource(this.BAGCART_DATA);
 
   applyFilter (filterValue: string){

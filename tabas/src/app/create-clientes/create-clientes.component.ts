@@ -23,11 +23,11 @@ export class CreateClientesComponent implements OnInit {
 
   ngOnInit() {
   }
-
+   /**
+    * Creates a JSON structure to be sent.
+    */
   createJSON(){
     var sent : any = {};
-
-    // sent.code = "crearClientes";
 
     sent.cliente = {};
     sent.cliente.nombre = this.nombre.value;
@@ -37,18 +37,28 @@ export class CreateClientesComponent implements OnInit {
     sent.cliente.correo = this.correo.value;
     sent.cliente.carnet = this.carnet.value;
 
+    console.log(sent);
+
 
     return sent;
   }
 
   hardcoded = "{\"nombre\":\"Jung\",\"tel\":\"993-975-6320\",\"correo\":\"twaddington9@aol.com\",\"carnet\":\"532-98-4556\",\"apellido\":\"Bak\",\"cedula\":1239451438}"
+  pleasework = "is it working?"
 
+
+  /**
+   * Sends JSON created in createJSON() via REST service
+   */
   sendPost(){
+    /**
+     * Construye los headers necesarios para el REST service
+     */
     const httpOptions = {
        headers: new HttpHeaders({
         'Content-Type' : 'application/json',
-        //'Origin' : 'http://www.facebook.com',
-        // 'Access-Control-Allow-Origin' : '*',
+        // 'Origin' : 'http://www.facebook.com',
+        'Access-Control-Allow-Origin' : 'true'
         // 'Access-Control-Allow-Headers' : '*',
         // 'Access-Control-Allow-Methods' : 'GET, POST, PUT, DELETE, OPTIONS'
        })
@@ -60,16 +70,13 @@ export class CreateClientesComponent implements OnInit {
     //     console.log(data);
     //   });
 
-    // this.http.post("https://tabas.azurewebsites.net/api/clients",this.hardcoded, httpOptions)
-    // .toPromise()
-    // .then(data => {
-    //   console.log(data);
-    // });
+    this.http.post("http://localhost:1337/tabas.azurewebsites.net/api/clients/",this.createJSON())
+      .toPromise()
+      .then(data => {
+        console.log(data);
+      });
 
-    this.http.post("https://tabas.azurewebsites.net/api/clients", this.hardcoded, httpOptions).toPromise();
-    // .then(data => {
-    //   console.log(data);
-    // });
+
     
 
     // this.router.navigate(['clientes']);

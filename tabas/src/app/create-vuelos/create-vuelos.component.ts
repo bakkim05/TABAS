@@ -20,6 +20,9 @@ export class CreateVuelosComponent implements OnInit {
   ngOnInit() {
   }
 
+     /**
+    * Creates a JSON structure to be sent.
+    */
   createJSON(){
     var sent : any = {};
 
@@ -30,7 +33,13 @@ export class CreateVuelosComponent implements OnInit {
     return sent;
   }
 
+  /**
+   * Sends JSON created in createJSON() via REST service
+   */
   sendPost(){
+    /**
+     * Construye los headers necesarios para el REST service
+     */
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type' : 'application/json',
