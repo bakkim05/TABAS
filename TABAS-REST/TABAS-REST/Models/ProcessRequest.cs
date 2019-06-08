@@ -291,6 +291,39 @@ namespace TABAS_REST.Models
             return lis;
         }
 
+
+        public List<MaletasxUsuarioModel> MaletaXusuarioGet()
+        {
+            List<MaletasxUsuarioModel> lis = new List<MaletasxUsuarioModel>();
+
+            using (var conn = new NpgsqlConnection(CONSTANTS.CONN_STR_POSTGRE_SQL))
+            {
+                conn.Open();
+
+                // Retrieve all rows
+                using (var cmd = new NpgsqlCommand("select client.firstname, client.lastname, client.clientid, count( clientxsuitcase.clientid) from client, clientxsuitcase where client.clientid = clientxsuitcase.clientid  group by client.clientid", conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        lis.Add(new MaletasxUsuarioModel
+                        {
+                            Nombre = reader.GetString(0),
+                            Apellido = reader.GetString(1),
+                            Cedula = reader.GetInt64(2),
+                            Maletas = reader.GetInt16(3),
+                            //Destino = reader.GetString(3),
+                            //Estado =reader.GetBoolean(4)
+                        });
+                    }
+                }
+                conn.Close();
+                //Console.WriteLine(reader.GetString(0));
+
+            }
+            return lis;
+        }
+
     }
 }
 /*

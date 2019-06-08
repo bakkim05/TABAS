@@ -104,6 +104,10 @@ namespace TABAS_REST.Models
         public const string FL_ESTADO = "state";
         public const string PLANE_ID = "planeid";
 
+
+        //maletas por persona
+        public const string CANT_MALETAS = "cant";
+
     }
 }
 

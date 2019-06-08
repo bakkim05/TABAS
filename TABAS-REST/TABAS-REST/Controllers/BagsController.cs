@@ -8,15 +8,23 @@ using TABAS_REST.Models;
 
 namespace TABAS_REST.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class BagsController : ControllerBase
     {
         // GET: api/Bags
         [HttpGet]
+        [Route("api/bags")]
         public ActionResult<IEnumerable<BagModel>> Get()
         {
             return new ProcessRequest().BagControllerGet();
+        }
+
+        // GET: api/BagCart
+        [HttpGet]
+        [Route("api/bags/users")]
+        public ActionResult<IEnumerable<MaletasxUsuarioModel>> Get1()
+        {
+            return new ProcessRequest().MaletaXusuarioGet();
         }
 
         // GET: api/Bags/5
@@ -28,6 +36,7 @@ namespace TABAS_REST.Controllers
 
         // POST: api/Bags
         [HttpPost]
+        [Route("api/bags")]
         public void Post([FromBody] string value)
         {
         }
