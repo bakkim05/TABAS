@@ -22,20 +22,6 @@ export class CreateBagCartsComponent implements OnInit {
   ngOnInit() {
   }
 
-   /**
-    * Creates a JSON structure to be sent.
-    */
-  createJSON(){
-    var sent : any = {};
-
-    sent.bagCart = {};
-    sent.bagCart.id = parseInt(this.id.value);
-    sent.bagCart.marca = this.marca.value;
-    sent.bagCart.modelo = parseInt(this.modelo.value);
-    sent.bagCart.vuelo = parseInt(this.vuelo.value);
-
-    return sent;
-  }
   /**
    * Sends JSON created in createJSON() via REST service
    */
@@ -43,16 +29,9 @@ export class CreateBagCartsComponent implements OnInit {
         /**
      * Construye los headers necesarios para el REST service
      */
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type' : 'application/json',
-        'Access-Control-Allow-Origin' : '*',
-        'Access-Control-Allow-Headers' : 'Content-Type',
-        'Access-Control-Allow-Methods' : 'GET, POST, PUT, DELETE, OPTIONS'
-      })
-    };
 
-    this.http.post("http://httpbin.org/post",this.createJSON(),httpOptions)
+    var jsonPost = {"id":parseInt(this.id.value), "marca":this.marca.value, "modelo":parseInt(this.modelo.value),"vuelo":parseInt(this.vuelo.value)};
+    this.http.post("https://tabas.azurewebsites.net/api/bagCarts",jsonPost)
       .toPromise()
       .then(data => {
         console.log(data);

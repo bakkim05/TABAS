@@ -4,6 +4,8 @@ import { Router } from "@angular/router";
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from "@angular/common/http";
 
+declare let jsPDF;
+
 @Component({
   selector: 'app-create-maletas',
   templateUrl: './create-maletas.component.html',
@@ -24,43 +26,16 @@ export class CreateMaletasComponent implements OnInit {
   ngOnInit() {
   }
 
-   /**
-    * Creates a JSON structure to be sent.
-    */
-  createJSON(){
-    var sent : any = {};
-
-    sent.code = "crearMaletas";
-
-    sent.maleta = {};
-    sent.maleta.id = parseInt(this.id.value);
-    sent.maleta.color = this.color.value;
-    sent.maleta.peso = parseInt(this.peso.value);
-    sent.maleta.costo = parseInt(this.costo.value);
-    sent.maleta.estado = this.estado.value;
-    sent.maleta.cedula = this.cedula.value;
-    sent.maleta.bagCart = parseInt(this.bagCart.value);
-
-    return sent;
-  }
-
   /**
    * Sends JSON created in createJSON() via REST service
    */
   sendPost(){
-        /**
-     * Construye los headers necesarios para el REST service
-     */
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type' : 'application/json',
-        'Access-Control-Allow-Origin' : '*',
-        'Access-Control-Allow-Headers' : 'Content-Type',
-        'Access-Control-Allow-Methods' : 'GET, POST, PUT, DELETE, OPTIONS'
-      })
-    };
 
-    this.http.post("http://httpbin.org/post",this.createJSON(),httpOptions)
+    var jsonPost = {"id":parseInt(this.id.value), "color":this.color.value,
+                    "peso":parseInt(this.peso.value),"costo":parseInt(this.costo.value),
+                    "estado":this.estado.value, "cedula":this.cedula.value, "bagCart":parseInt(this.bagCart.value)};
+
+    this.http.post("https://tabas.azurewebsites.net/api/maletas",jsonPost)
       .toPromise()
       .then(data => {
         console.log(data);
@@ -68,6 +43,5 @@ export class CreateMaletasComponent implements OnInit {
 
     // this.router.navigate(['clientes']);
   }
-
 
 }

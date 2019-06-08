@@ -20,36 +20,14 @@ export class CreateVuelosComponent implements OnInit {
   ngOnInit() {
   }
 
-     /**
-    * Creates a JSON structure to be sent.
-    */
-  createJSON(){
-    var sent : any = {};
-
-    sent.vuelos = {};
-    sent.vuelos.vuelo = parseInt(this.vuelo.value);
-    sent.vuelos.avion = parseInt(this.avion.value);
-
-    return sent;
-  }
-
   /**
    * Sends JSON created in createJSON() via REST service
    */
   sendPost(){
-    /**
-     * Construye los headers necesarios para el REST service
-     */
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type' : 'application/json',
-        'Access-Control-Allow-Origin' : '*',
-        'Access-Control-Allow-Headers' : 'Content-Type',
-        'Access-Control-Allow-Methods' : 'GET, POST, PUT, DELETE, OPTIONS'
-      })
-    };
 
-    this.http.post("http://httpbin.org/post",this.createJSON(),httpOptions)
+    var jsonPost = {"vuelo":parseInt(this.vuelo.value), "avion":parseInt(this.avion.value)};
+
+    this.http.post("https://tabas.azurewebsites.net/api/vuelos",jsonPost)
       .toPromise()
       .then(data => {
         console.log(data);

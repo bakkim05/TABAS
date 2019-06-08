@@ -35,7 +35,7 @@ export class CommsService {
   }
 
   public getUsers(){
-    return this.http.get<any[]>('https://tabas.azurewebsites.net/api/employees');
+    return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/users');
   }
 
   public getVuelos(){
