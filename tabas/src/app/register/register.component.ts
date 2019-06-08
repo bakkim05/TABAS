@@ -10,7 +10,7 @@ import { HttpHeaders } from "@angular/common/http";
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
+// Inicializa las variables del Foro
   private nombre = new FormControl('');
   private apellido = new FormControl('');
   private rol = new FormControl('');
@@ -22,32 +22,13 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  createJSON(){
-    var sent : any = {};
-
-    sent.code = "registrarUsuario";
-
-    sent.usuario = {};
-    sent.usuario.nombre = this.nombre.value;
-    sent.usuario.apellido = this.apellido.value;
-    sent.usuario.rol = parseInt(this.rol.value);
-    sent.usuario.username = this.username.value;
-    sent.usuario.password = this.password.value;
-
-    return sent;
-  }
-
+  // Envia el JSON al REST
   sendPost(){
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type' : 'application/json',
-        'Access-Control-Allow-Origin' : '*',
-        'Access-Control-Allow-Headers' : 'Content-Type',
-        'Access-Control-Allow-Methods' : 'GET, POST, PUT, DELETE, OPTIONS'
-      })
-    };
 
-    this.http.post("http://httpbin.org/post",this.createJSON(),httpOptions)
+    var jsonPost = {"nombre":this.nombre.value, "apellido":this.apellido.value , "rol":parseInt(this.rol.value),
+                "username": this.username.value , "password" : this.password.value };
+
+    this.http.post("http://httpbin.org/post",jsonPost)
       .toPromise()
       .then(data => {
         console.log(data);

@@ -13,10 +13,10 @@ import { Router } from "@angular/router"
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
-
+// Inicializacion de valores del foro
   private username = new FormControl('');
   private password = new FormControl('');
-
+//  Consigue los usuarios validos para el log in del REST
   private USERS_DATA = []
   private clientesObservable : Observable<any[]>;
 
@@ -29,7 +29,7 @@ export class LogInComponent implements OnInit {
 
 
   }
-
+// Valida que la cuenta sea autentica
   validate() : void{
     var user = this.username;
     var pw = JSON.stringify(this.password.value);

@@ -9,10 +9,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./report-maletas.component.css']
 })
 export class ReportMaletasComponent implements OnInit {
-
+  // Informacion recibida del REST
   private MxC_DATA = []
   private MxCObservable : Observable<any[]>;
 
+  // Informacion desplegada en las tablas
   displayedColumns: string[] = ['nombre','apellido','cedula','cantMaletas'];
   dataSource = new MatTableDataSource(this.MxC_DATA);
 
@@ -20,6 +21,7 @@ export class ReportMaletasComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  // Recepcion de la informacion del REST
   constructor(private communicationService : CommsService ) {
     this.MxCObservable = this.communicationService.getReportClientes();
     this.communicationService.getReportClientes().subscribe((res : any[])=>{

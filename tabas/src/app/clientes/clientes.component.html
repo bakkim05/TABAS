@@ -2,20 +2,20 @@
 
 <mat-divider></mat-divider>
 
+<!-- Botones para navegar hacia agregar clientes y editar clientes -->
 <div class="buttons" >
-    <!-- <a mat-flat-button color ="warn" (click)="getPosts()">Refresh</a> -->
     <a mat-flat-button color ="primary" routerLink="../createClientes">Agregar</a>
     <a mat-flat-button color ="warn" routerLink="../editClientes">Editar</a>
 </div>
 
 <mat-divider></mat-divider>
 
-
-
+<!-- Barra de busqueda -->
 <mat-form-field>
         <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar">
     </mat-form-field>
-    
+   
+    <!-- Tabla de datos del cliente -->
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z9">
         
         <ng-container matColumnDef="nombre">

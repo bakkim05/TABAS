@@ -10,7 +10,7 @@ import { HttpHeaders } from "@angular/common/http";
   styleUrls: ['./create-vuelos.component.css']
 })
 export class CreateVuelosComponent implements OnInit {
-
+  // inicializacion de variables del foro
   private vuelo = new FormControl('');
   private avion = new FormControl('');
 

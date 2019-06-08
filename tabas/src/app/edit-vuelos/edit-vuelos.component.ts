@@ -11,6 +11,7 @@ import { HttpHeaders } from "@angular/common/http";
 })
 export class EditVuelosComponent implements OnInit {
 
+  // Inicializacion de variables del foro
   private vuelo = new FormControl('');
   private avion = new FormControl('');
 
@@ -19,7 +20,7 @@ export class EditVuelosComponent implements OnInit {
   ngOnInit() {
   }
 
-
+// Envia JSON al REST
   sendPost(){
 
     var jsonPost = {"vuelo":parseInt(this.vuelo.value), "avion":parseInt(this.avion.value)};

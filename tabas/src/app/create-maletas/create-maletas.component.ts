@@ -12,7 +12,7 @@ declare let jsPDF;
   styleUrls: ['./create-maletas.component.css']
 })
 export class CreateMaletasComponent implements OnInit {
-
+  // inicializacion de variables del foro
   private id = new FormControl('');
   private color = new FormControl('');
   private peso = new FormControl('');

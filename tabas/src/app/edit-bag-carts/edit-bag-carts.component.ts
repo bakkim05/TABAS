@@ -10,7 +10,7 @@ import { HttpHeaders } from "@angular/common/http";
   styleUrls: ['./edit-bag-carts.component.css']
 })
 export class EditBagCartsComponent implements OnInit {
-  
+  // Inicializacion de las variables del foro
   private id = new FormControl('');
   private marca = new FormControl('');
   private modelo = new FormControl('');
@@ -22,7 +22,7 @@ export class EditBagCartsComponent implements OnInit {
   ngOnInit() {
   }
 
-
+// Envia el JSON al REST
   sendPost(){
 
     var jsonPost = {"id":parseInt(this.id.value),"marca":this.marca.value,

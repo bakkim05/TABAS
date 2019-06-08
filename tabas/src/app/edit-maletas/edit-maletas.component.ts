@@ -11,6 +11,7 @@ import { HttpHeaders } from "@angular/common/http";
 })
 export class EditMaletasComponent implements OnInit {
 
+  // Inicializacion de variables del foro
   private id = new FormControl('');
   private color = new FormControl('');
   private peso = new FormControl('');
@@ -23,7 +24,7 @@ export class EditMaletasComponent implements OnInit {
 
   ngOnInit() {
   }
-
+// Envia el JSON al servidor REST
   sendPost(){
 
     var jsonPost = {"id":parseInt(this.id.value), "color":this.color.value,

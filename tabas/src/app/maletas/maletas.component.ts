@@ -9,16 +9,20 @@ import { Observable } from 'rxjs';
   styleUrls: ['./maletas.component.css']
 })
 export class MaletasComponent implements OnInit {
+  // JSON recibido del REST
   private MALETAS_DATA = []
   private maletasObservable : Observable<any[]>;
 
+  // Informacion de columnas
   displayedColumns: string[] = ['id','color','peso','costo','estado','clientid','bagCart'];
   dataSource = new MatTableDataSource(this.MALETAS_DATA);
 
+  // Funcion de la barra de filtraje de la tabla
   applyFilter (filterValue: string){
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  // Consigue infomracion del REST
   constructor(private communicationService : CommsService) {
     this.maletasObservable = this.communicationService.getMaletas();
     this.communicationService.getMaletas().subscribe((res : any[])=>{

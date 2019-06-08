@@ -2,6 +2,7 @@
 
 <mat-divider></mat-divider>
 
+<!-- Botones para la creacion y edicion de vuelos -->
 <div class="buttons" >
     <!-- <a mat-flat-button color ="warn" (click)="getPosts()">Refresh</a> -->
     <a mat-flat-button color ="primary" routerLink="../createVuelos">Agregar</a>
@@ -11,11 +12,12 @@
 <mat-divider></mat-divider>
 
 
-
+<!-- busqueda de vuelos -->
 <mat-form-field>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar">
 </mat-form-field>
     
+<!-- Creacion de tabla con informacion de dataSource -->
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z9">
     
     <ng-container matColumnDef="avion">

@@ -10,16 +10,20 @@ import { Observable } from 'rxjs';
 })
 export class ReportConciliacionComponent implements OnInit {
 
+  // Informacion recibido del REST
   private CONCILIACION_DATA = []
   private conciliacionObservable : Observable<any[]>;
 
+  // Informacion de desplegar en la tabla
   displayedColumns: string[] = ['numvuelo','tipoavion','capacidad','maletasbagcart','maletasavion'];
   dataSource = new MatTableDataSource(this.CONCILIACION_DATA);
 
+  // Filtro de busqueda
   applyFilter (filterValue: string){
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  // Recepcion de JSON del REST
   constructor(private communicationService : CommsService ) {
     this.conciliacionObservable = this.communicationService.getReportMaletas();
     this.communicationService.getReportMaletas().subscribe((res : any[])=>{

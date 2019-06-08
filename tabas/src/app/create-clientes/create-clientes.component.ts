@@ -11,7 +11,7 @@ import { Type } from '@angular/compiler/src/core';
   styleUrls: ['./create-clientes.component.css']
 })
 export class CreateClientesComponent implements OnInit {
-
+  // inicializacion de variables del foro
   private nombre = new FormControl('');
   private apellido = new FormControl('');
   private cedula = new FormControl('');

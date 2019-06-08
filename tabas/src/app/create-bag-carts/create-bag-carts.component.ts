@@ -10,7 +10,7 @@ import { HttpHeaders } from "@angular/common/http";
   styleUrls: ['./create-bag-carts.component.css']
 })
 export class CreateBagCartsComponent implements OnInit {
-
+  //inicializa las variables recibidas del formulario
   private id = new FormControl('');
   private marca = new FormControl('');
   private modelo = new FormControl('');

@@ -2,6 +2,7 @@
   <span>Editar Cliente</span>
 </mat-toolbar>
 
+<!-- Foro con informacion para la edicion de clientes -->
 <mat-card-content>
    <form class="my-form">
 
@@ -35,6 +36,7 @@
         <input  matInput  placeholder="201515359388"  name="carnet" [formControl]="carnet" >
      </mat-form-field>
 
+     <!-- botones de navegacion -->
 <mat-card-actions class = "actionButtons">
     <button mat-raised-button routerLink="../clientes" color="warn">CANCELAR</button>
     <button mat-raised-button (click)="sendPost()" color="primary">EDITAR</button>

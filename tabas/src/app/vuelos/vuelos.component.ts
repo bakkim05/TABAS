@@ -9,16 +9,20 @@ import { Observable } from 'rxjs';
   styleUrls: ['./vuelos.component.css']
 })
 export class VuelosComponent implements OnInit {
+  // Informacion recibida del REST
   private VUELOS_DATA = []
   private vuelosObservable : Observable<any[]>;
 
+  // Informacion deplegada en las tablas
   displayedColumns: string[] = ['vuelo','avion'];
   dataSource = new MatTableDataSource(this.VUELOS_DATA);
 
+  // Filtro de busqueda
   applyFilter (filterValue: string){
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  // Recepcion de informacion del REST
   constructor(private communicationService : CommsService) {
     this.vuelosObservable = this.communicationService.getVuelos();
     this.communicationService.getVuelos().subscribe((res : any[])=>{

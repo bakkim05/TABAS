@@ -1,7 +1,7 @@
 <app-nav> </app-nav>
 
 <mat-divider></mat-divider>
-
+<!-- Botones de accion para la creacion o edicion de Maletas -->
 <div class="buttons" >
     <a mat-flat-button color ="primary" routerLink="../createMaletas">Agregar</a>
     <a mat-flat-button color ="warn" routerLink="../editMaletas">Editar</a>
@@ -9,11 +9,12 @@
 
 <mat-divider></mat-divider>
 
-
+<!-- Barra de Filtro -->
 <mat-form-field>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar">
 </mat-form-field>
 
+<!-- Tabla de despliegue de Maletas -->
 <div>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z9">
 

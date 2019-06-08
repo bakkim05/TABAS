@@ -1,7 +1,7 @@
 <app-nav> </app-nav>
 
 <mat-divider></mat-divider>
-
+<!-- Crea Botones para la redireccion hacia las paginas de createBagCarts, editBagCarts y cerrarBagCarts -->
 <div class="buttons" >
     <a mat-flat-button color ="primary" routerLink="../createBagCarts">Agregar</a>
     <a mat-flat-button color ="warn" routerLink="../editBagCarts">Editar</a>
@@ -11,10 +11,12 @@
 
 <mat-divider></mat-divider>
 
+<!-- Buscador para la tabla de bag Carts -->
 <mat-form-field>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar">
 </mat-form-field>
 
+<!-- Tabla de Bag Carts -->
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z9">
 
     <ng-container matColumnDef="id">

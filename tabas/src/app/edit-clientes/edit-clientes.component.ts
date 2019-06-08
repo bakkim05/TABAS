@@ -11,6 +11,7 @@ import { Router } from "@angular/router";
 })
 export class EditClientesComponent implements OnInit {
 
+  // Inicializacion de variables del foro
   private nombre = new FormControl('');
   private apellido = new FormControl('');
   private cedula = new FormControl('');
@@ -23,7 +24,7 @@ export class EditClientesComponent implements OnInit {
   ngOnInit() {
   }
 
-
+// Envia el JSON al servidor REST
   sendPost(){
 
 
