@@ -1,3 +1,4 @@
+-- inserts para la tabla empleados
 INSERT INTO Employee (FirstName, LastName, ID_number, Role, Username, Password ) 
     VALUES 
         ('Bengt',      'Duke',        106860313, 'Embarcador', 'BengtDuke', 'asdf'),
@@ -21,6 +22,7 @@ INSERT INTO Employee (FirstName, LastName, ID_number, Role, Username, Password )
         ('Nadean',     'Esch',        808930448, 'Recepcionista', 'NadeanEsch', 'asdf'),
         ('Shel',       'Bris',        508930445, 'Recepcionista', 'ShelBris', 'asdf');
 
+-- inserts para la tabla clientes
 INSERT INTO Client (ClientID, FirstName, LastName, Email, Phone, Carnet) 
     VALUES 
         (3847890434, 'Korie', 'Carrier', 'kcarrier0@mediafire.com', 33440889, '665-26-3833'),
@@ -114,6 +116,7 @@ INSERT INTO Client (ClientID, FirstName, LastName, Email, Phone, Carnet)
         (3865515305, 'Angus', 'Caillou', 'acaillou2g@blogger.com', 62992019, '207-12-9965'),
         (6023846107, 'Seline', 'Paviour', 'spaviour2h@usa.gov', 92386849, '552-37-7287');
 
+-- inserts para la tabla maletas
 INSERT INTO SuitCase (SuitCaseID, Color, Weight, Cost, State) 
     VALUES 
         (4293130293, 'Indigo', 61, 4, true),
@@ -317,6 +320,7 @@ INSERT INTO SuitCase (SuitCaseID, Color, Weight, Cost, State)
         (2394000690, 'Mauv', 96, 91, true),
         (3913359805, 'Goldenrod', 36, 26, false);
 
+-- inserts para la tabla bagcart
 INSERT INTO BagCart (BagCartID, Brand, Model, Sec_Code)
     VALUES 
         (8327752959, 'S40', 2001, NULL),
@@ -420,6 +424,7 @@ INSERT INTO BagCart (BagCartID, Brand, Model, Sec_Code)
         (8182787424, 'Cabriolet', 1985, NULL),
         (6202155236, 'Impala', 2008, NULL);
 
+-- inserts para la tabla vuelo
 INSERT INTO Flight (FlightID, Departure_Date, Origin, Destiny) 
     VALUES 
         (5005697948, '2018-08-30 08:16:05','AAA', 'AKP'),
@@ -473,6 +478,7 @@ INSERT INTO Flight (FlightID, Departure_Date, Origin, Destiny)
         (9068557385, '2019-07-17 18:34:07','ADZ', 'AEH'),
         (9903597375, '2019-10-03 22:58:52','ADX', 'AEP');
 
+-- inserts para la tabla avion
 INSERT INTO Plane (PlaneID) 
     VALUES 
         (8565718480),
@@ -526,6 +532,7 @@ INSERT INTO Plane (PlaneID)
         (7732963009),
         (3237231388);
 
+-- inserts para la tabla modelo de avion
 INSERT INTO PlaneModel (PlaneModelID, CellarNumber) 
     VALUES 
         (7664758071, 4),
@@ -554,6 +561,7 @@ INSERT INTO PlaneModel (PlaneModelID, CellarNumber)
         (8186712518, 4),
         (1966946635, 1);
 
+-- inserts para la tabla bodega
 INSERT INTO Cellar (CellarID, Capacity)
     VALUES
         (6334286344, 144),
@@ -692,6 +700,7 @@ INSERT INTO Cellar (CellarID, Capacity)
         (9494627447, 183),
         (6042766575, 148);
 
+-- inserts para la tabla relacion cliente-maleta
 INSERT INTO ClientXSuitCase (ClientID, SuitCaseID)
     VALUES
         (3847890434, 4293130293),
@@ -895,6 +904,7 @@ INSERT INTO ClientXSuitCase (ClientID, SuitCaseID)
         (9863039645, 3913359805),
         (9863039645, 2394000690);
 
+-- inserts para la tabla relacion maleta-bagcart
 INSERT INTO SuitCaseXBagCart (SuitCaseID, BagCartID)
     VALUES
         (4293130293, 8327752959),
@@ -1098,6 +1108,7 @@ INSERT INTO SuitCaseXBagCart (SuitCaseID, BagCartID)
         (2394000690, 8182787424),
         (3913359805, 6202155236);
 
+-- inserts para la tabla relacion vuelo-bagcart
 INSERT INTO FlightXBagCart (BagCartID,FlightID)
     VALUES
         (8327752959, 5005697948),
@@ -1201,6 +1212,7 @@ INSERT INTO FlightXBagCart (BagCartID,FlightID)
         (8182787424, 9068557385),
         (6202155236, 9903597375);
 
+-- inserts para la tabla relacion avion-vuelo
 INSERT INTO PlaneXFlight (FlightID, PlaneID)
     VALUES 
         (5005697948, 8565718480),
@@ -1254,6 +1266,7 @@ INSERT INTO PlaneXFlight (FlightID, PlaneID)
         (9068557385, 7732963009),
         (9903597375, 3237231388);
 
+-- inserts para la tabla relacion avion-modelo de avion
 INSERT INTO PlaneXPlaneModel (PlaneID, PlaneModelID)
     VALUES
         (8565718480, 7664758071),
@@ -1307,6 +1320,7 @@ INSERT INTO PlaneXPlaneModel (PlaneID, PlaneModelID)
         (7732963009, 8186712518),
         (3237231388, 1966946635);
 
+-- inserts para la tabla relacion avion-bodega
 INSERT INTO PlaneXCellar (PlaneID, CellarID)
     VALUES
         (8565718480, 6334286344),
