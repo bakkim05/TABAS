@@ -3,7 +3,9 @@ CREATE TABLE Employee (
   FirstName varchar (15),
   LastName varchar (15),
   ID_number bigint PRIMARY KEY NOT NULL,
-  Role varchar
+  Role varchar (13),
+  Username varchar (50),
+  Password varchar (50)
 );
 
 -- insert listo
@@ -64,24 +66,24 @@ CREATE TABLE ReportSuitcase (
   Capacity INTEGER,
   SuitCasesOnPlane INTEGER,
   SuitCasesOnFlight INTEGER,
-  SuitCasesOnBagCart INTEGER,
-)
+  SuitCasesOnBagCart INTEGER
+);
+
+CREATE TABLE Banned(
+  BannedSuitCaseID BIGINT PRIMARY KEY NOT NULL
+);
 
 CREATE TABLE FlightXReport (
   ReportID BIGINT,
   FlightID BIGINT,
   PRIMARY KEY (ReportID, FlightID)
-)
-
-CREATE TABLE Banned(
-  BannedSuitCaseID BIGINT PRIMARY KEY NOT NULL
-)
+);
 
 CREATE TABLE BannedByFlight (
   ReportID BIGINT,
   BannedSuitCaseID BIGINT,
   PRIMARY KEY (ReportID, BannedSuitCaseID)
-)
+);
 
 -- insert listo
 CREATE TABLE ClientXSuitCase (
@@ -125,6 +127,15 @@ CREATE TABLE PlaneXCellar (
   PRIMARY KEY (PlaneID, CellarID)
 );
 
+CREATE TABLE SuitCaseXPlane (
+  PlaneID BIGINT,
+  SuitCaseID BIGINT,
+  PRIMARY KEY (PlaneID, SuitCaseID)
+);
+
+ALTER TABLE SuitCaseXPlane ADD FOREIGN KEY (PlaneID) REFERENCES Plane (PlaneID);
+ALTER TABLE SuitCaseXPlane ADD FOREIGN KEY (SuitCaseID) REFERENCES SuitCase (SuitCaseID);
+
 ALTER TABLE ClientXSuitCase ADD FOREIGN KEY (ClientID) REFERENCES Client (ClientID);
 ALTER TABLE ClientXSuitCase ADD FOREIGN KEY (SuitCaseID) REFERENCES SuitCase (SuitCaseID);
 
@@ -143,5 +154,8 @@ ALTER TABLE PlaneXPlaneModel ADD FOREIGN KEY (PlaneID) REFERENCES Plane (PlaneID
 ALTER TABLE PlaneXCellar ADD FOREIGN KEY (PlaneID) REFERENCES Plane (PlaneID);
 ALTER TABLE PlaneXCellar ADD FOREIGN KEY (CellarID) REFERENCES Cellar (CellarID);
 
--- ALTER TABLE SuitCaseXCellar ADD FOREIGN KEY (SuitCaseID) REFERENCES SuitCase (SuitCaseID);
--- ALTER TABLE SuitCaseXCellar ADD FOREIGN KEY (CellarID) REFERENCES Cellar (CellarID);
+ALTER TABLE BannedByFlight ADD FOREIGN KEY (ReportID) REFERENCES ReportSuitcase (ReportID);
+ALTER TABLE BannedByFlight ADD FOREIGN KEY (BannedSuitCaseID) REFERENCES Banned (BannedSuitCaseID);
+
+ALTER TABLE FlightXReport ADD FOREIGN KEY (ReportID) REFERENCES ReportSuitcase (ReportID);
+ALTER TABLE FlightXReport ADD FOREIGN KEY (FlightID) REFERENCES Flight (FlightID);

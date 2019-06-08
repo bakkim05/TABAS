@@ -1,25 +1,25 @@
-INSERT INTO Employee (FirstName, LastName, ID_number, role) 
+INSERT INTO Employee (FirstName, LastName, ID_number, Role, Username, Password ) 
     VALUES 
-        ('Bengt',      'Duke',        106860313, 'Embarcador'),
-        ('Moise',      'Renon',       305680559, 'Embarcador'),
-        ('Adelind',    'Scathard',    705790778, 'Embarcador'),
-        ('Ollie',      'Cromarty',    905890449, 'Embarcador'),
-        ('Marcellus',  'Cramond',     205980899, 'Embarcador'),
-        ('Charyl',     'Crigin',      704890788, 'Scan'),
-        ('Troy',       'Sandyfirth',  608966883, 'Scan'),
-        ('Rosalia',    'Wey',    507870477, 'Scan'),
-        ('Maurita',    'McCudden',    108980999, 'Scan'),
-        ('Maximilien', 'Vergo',       805660995, 'Scan'),
-        ('Kristoffer', 'Elverston',   207890336, 'Administrador'),
-        ('Reinhold',   'Phillipson',  405890667, 'Administrador'),
-        ('Lion',       'MacPike',     703980778, 'Administrador'),
-        ('Davine',     'Malecky',     605990477, 'Administrador'),
-        ('Mohandis',   'Hackelton',   308970465, 'Administrador'),
-        ('Ninette',    'Galtone',     505860589, 'Recepcionista'),
-        ('Ashly',      'Garrold',     508890898, 'Recepcionista'),
-        ('Rachelle',   'Collacombe',  802690878, 'Recepcionista'),
-        ('Nadean',     'Esch',        808930448, 'Recepcionista'),
-        ('Shel',       'Bris',        508930445, 'Recepcionista');
+        ('Bengt',      'Duke',        106860313, 'Embarcador', 'BengtDuke', 'asdf'),
+        ('Moise',      'Renon',       305680559, 'Embarcador', 'MoiseRenon', 'asdf'),
+        ('Adelind',    'Scathard',    705790778, 'Embarcador', 'AdelindScathard', 'asdf'),
+        ('Ollie',      'Cromarty',    905890449, 'Embarcador', 'OllieCromarty', 'asdf'),
+        ('Marcellus',  'Cramond',     205980899, 'Embarcador', 'MarcellusCramond', 'asdf'),
+        ('Charyl',     'Crigin',      704890788, 'Scan', 'CharylCrigin', 'asdf'),
+        ('Troy',       'Sandyfirth',  608966883, 'Scan', 'TroySandyfirth', 'asdf'),
+        ('Rosalia',    'Wey',         507870477, 'Scan', 'RosaliaWey', 'asdf'),
+        ('Maurita',    'McCudden',    108980999, 'Scan', 'MauritaMcCudden', 'asdf'),
+        ('Maximilien', 'Vergo',       805660995, 'Scan', 'MaximilienVergo', 'asdf'),
+        ('Kristoffer', 'Elverston',   207890336, 'Administrador', 'KristofferElverston', 'asdf'),
+        ('Reinhold',   'Phillipson',  405890667, 'Administrador', 'ReinholdPhillipson', 'asdf'),
+        ('Lion',       'MacPike',     703980778, 'Administrador', 'LionMacPike', 'asdf'),
+        ('Davine',     'Malecky',     605990477, 'Administrador', 'DavineMalecky', 'asdf'),
+        ('Mohandis',   'Hackelton',   308970465, 'Administrador', 'MohandisHackelton', 'asdf'),
+        ('Ninette',    'Galtone',     505860589, 'Recepcionista', 'NinetteGaltone', 'asdf'),
+        ('Ashly',      'Garrold',     508890898, 'Recepcionista', 'AshlyGarrold', 'asdf'),
+        ('Rachelle',   'Collacombe',  802690878, 'Recepcionista', 'RachelleCollacombe', 'asdf'),
+        ('Nadean',     'Esch',        808930448, 'Recepcionista', 'NadeanEsch', 'asdf'),
+        ('Shel',       'Bris',        508930445, 'Recepcionista', 'ShelBris', 'asdf');
 
 INSERT INTO Client (ClientID, FirstName, LastName, Email, Phone, Carnet) 
     VALUES 
