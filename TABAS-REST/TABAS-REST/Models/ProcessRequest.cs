@@ -240,18 +240,7 @@ namespace TABAS_REST.Models
 
                 // Retrieve all rows
                 using (var cmd = new NpgsqlCommand(
-                    "select f.flightid, pll.planemodelid, ce.capacity, count(bg.bagcartid), count(su.suitcaseid)"+
-                    "from flight f"+
-                    "join planexflight pf on f.flightid = pf.flightid"+
-                    "join plane pl on pl.planeid = pf.planeid"+
-                    "join planexplanemodel pll on pll.planeid = pl.planeid"+
-                    "join planexcellar pc on pl.planeid = pc.planeid"+
-                    "join cellar ce on ce.cellarid = pc.cellarid"+
-                    "join flightxbagcart fb on fb.flightid = f.flightid"+
-                    "join bagcart bg on bg.bagcartid = fb.bagcartid"+
-                    "join suitcasexbagcart sb on sb.bagcartid = bg.bagcartid"+
-                    "join suitcase su on su.suitcaseid = sb.suitcaseid"+
-                    "group by f.flightid, pll.planemodelid, ce.capacity"
+                    "select f.flightid, pll.planemodelid, ce.capacity, count(bg.bagcartid), count(su.suitcaseid) from flight f join planexflight pf on f.flightid=pf.flightid join plane pl on pl.planeid=pf.planeid join planexplanemodel pll on pll.planeid=pl.planeid join planexcellar pc on pl.planeid= pc.planeid join cellar ce on ce.cellarid=pc.cellarid join flightxbagcart fb on fb.flightid=f.flightid join bagcart bg on bg.bagcartid=fb.bagcartid join suitcasexbagcart sb on sb.bagcartid=bg.bagcartid join suitcase su on su.suitcaseid=sb.suitcaseid group by f.flightid, pll.planemodelid, ce.capacity"
                     , conn))
                 {
                     using (var reader = cmd.ExecuteReader())
@@ -372,19 +361,21 @@ namespace TABAS_REST.Models
 
                 // Retrieve all rows
                 using (var cmd = new NpgsqlCommand("SELECT * FROM planexflight", conn))
-                using (var reader = cmd.ExecuteReader())
                 {
-                    while (reader.Read())
+                    using (var reader = cmd.ExecuteReader())
                     {
-                        lis.Add(new FlightModelcs
+                        while (reader.Read())
                         {
-                            IdVuelo= reader.GetInt64(0),
-                            IdAvion = reader.GetInt64(1),
-                            //Partida = reader.GetTimeStamp(1).ToString(),
-                            //Origen = reader.GetString(2),
-                            //Destino = reader.GetString(3),
-                            //Estado =reader.GetBoolean(4)
-                        });
+                            lis.Add(new FlightModelcs
+                            {
+                                IdVuelo = reader.GetInt64(0),
+                                IdAvion = reader.GetInt64(1),
+                                //Partida = reader.GetTimeStamp(1).ToString(),
+                                //Origen = reader.GetString(2),
+                                //Destino = reader.GetString(3),
+                                //Estado =reader.GetBoolean(4)
+                            });
+                        }
                     }
                 }
                 conn.Close();
