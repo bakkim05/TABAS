@@ -27,17 +27,17 @@ namespace TABAS_REST.Controllers
 
         // POST: api/CorsTest
         [HttpPost]
-        public string Post([FromBody] string value)
+        public string Post([FromForm] string value)
         {
             return value;
         }
 
         // POST: api/CorsTest
-        [HttpPost]
-        public string Post1( string value)
-        {
-            return value;
-        }
+        //[HttpPost]
+        //public string Post1( string value)
+        //{
+        //    return value;
+        //}
 
         // PUT: api/CorsTest/5
         [HttpPut("{id}")]
