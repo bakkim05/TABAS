@@ -41,4 +41,13 @@ export class CommsService {
   public getVuelos(){
     return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/vuelos');
   }
+
+  public getReportClientes(){
+    return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/vuelos');
+  }
+
+  public getReportMaletas(){
+    return this.http.get<any[]>('https://my-json-server.typicode.com/bakkim05/clientes/vuelos');
+  }
+
 }

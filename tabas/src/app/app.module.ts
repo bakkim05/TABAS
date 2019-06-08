@@ -36,6 +36,8 @@ import { CerrarBagCartsComponent } from './cerrar-bag-carts/cerrar-bag-carts.com
 import { CreateVuelosComponent } from './create-vuelos/create-vuelos.component';
 import { EditVuelosComponent } from './edit-vuelos/edit-vuelos.component';
 import { NavReportComponent } from './nav-report/nav-report.component';
+import { ReportMaletasComponent } from './report-maletas/report-maletas.component';
+import { ReportConciliacionComponent } from './report-conciliacion/report-conciliacion.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { NavReportComponent } from './nav-report/nav-report.component';
     CreateVuelosComponent,
     EditVuelosComponent,
     NavReportComponent,
+    ReportMaletasComponent,
+    ReportConciliacionComponent,
   ],
   imports: [
     BrowserModule,

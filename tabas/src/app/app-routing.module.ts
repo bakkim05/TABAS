@@ -17,6 +17,8 @@ import { VuelosComponent } from './vuelos/vuelos.component';
 import { CreateVuelosComponent } from './create-vuelos/create-vuelos.component';
 import { EditVuelosComponent } from './edit-vuelos/edit-vuelos.component';
 import { CerrarBagCartsComponent } from './cerrar-bag-carts/cerrar-bag-carts.component';
+import { ReportMaletasComponent } from './report-maletas/report-maletas.component';
+import { ReportConciliacionComponent } from './report-conciliacion/report-conciliacion.component';
 
 const routes: Routes = [
   {path : ''                      , component : LogInComponent},
@@ -35,6 +37,8 @@ const routes: Routes = [
   {path : 'createBagCarts'        , component : CreateBagCartsComponent},
   {path : 'createClientes'        , component : CreateClientesComponent},
   {path : 'createVuelos'          , component : CreateVuelosComponent},
+  {path : 'maletasXclientes'      , component : ReportMaletasComponent},
+  {path : 'conciliacion'          , component : ReportConciliacionComponent},
   {path : '**'                    , component : Page404Component},
 ];
 

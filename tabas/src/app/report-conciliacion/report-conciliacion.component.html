@@ -1,0 +1,53 @@
+<app-nav> </app-nav>
+<app-nav-report></app-nav-report>
+
+<mat-divider></mat-divider>
+
+<mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar">
+    </mat-form-field>
+    
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z9">
+        
+        <ng-container matColumnDef="numVuelo">
+            <th mat-header-cell *matHeaderCellDef> Número de Vuelo</th>
+            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.numVuelo}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="tipoAvion">
+            <th mat-header-cell *matHeaderCellDef> Tipo de Avión</th>
+            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.tipoAvion}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="capacidad">
+            <th mat-header-cell *matHeaderCellDef> Capacidad</th>
+            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.capacidad}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="totalMaletas">
+            <th mat-header-cell *matHeaderCellDef> Total de Maletas</th>
+            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.totalMaletas}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="totalEnBagCart">
+            <th mat-header-cell *matHeaderCellDef> Total de Maletas en Bag Cart</th>
+            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.totalEnBagCart}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="totalEnAvion">
+            <th mat-header-cell *matHeaderCellDef> Total de Maletas en el Avión</th>
+            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.totalEnAvion}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="rechazadas">
+            <th mat-header-cell *matHeaderCellDef> Rechazadas</th>
+            <td mat-cell *matCellDef="let reporteConciliacion">{{reporteConciliacion.rechazadas}}</td>
+        </ng-container>
+
+    
+       
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+    </table>
