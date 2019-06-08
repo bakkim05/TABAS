@@ -4,20 +4,24 @@
 
 <mat-card-content>
   <form class="my-form">
-      <mat-form-field class="full-width">
+    <mat-form-field class="full-width">
           <mat-label>ID</mat-label>
           <input matInput placeholder="1" name="id" [formControl]="id" required>
       </mat-form-field>
 
-      <mat-form-field class="full-width">
+    <mat-form-field class="full-width">
           <mat-label>Marca</mat-label>
-          <input matInput placeholder="Honda" name="marca" [formControl]="marca"required>
+          <input matInput placeholder="Honda" name="marca" [formControl]="marca">
       </mat-form-field>
 
-      <mat-form-field class="full-width">
+    <mat-form-field class="full-width">
           <mat-label>Modelo</mat-label>
-          <input matInput placeholder="2019" name="modelo" [formControl]="modelo" required>
+          <input matInput placeholder="2019" name="modelo" [formControl]="modelo">
       </mat-form-field>
+    <mat-form-field class="full-width">
+        <mat-label>ID Vuelo</mat-label>
+        <input matInput placeholder="1" name="vuelo" [formControl]="vuelo">
+    </mat-form-field>  
 
   </form>
 </mat-card-content>

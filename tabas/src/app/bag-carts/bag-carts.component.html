@@ -5,6 +5,8 @@
 <div class="buttons" >
     <a mat-flat-button color ="primary" routerLink="../createBagCarts">Agregar</a>
     <a mat-flat-button color ="warn" routerLink="../editBagCarts">Editar</a>
+    <a mat-flat-button color ="primary" routerLink="../cerrarBagCarts">Cerrar</a>
+
 </div>
 
 <mat-divider></mat-divider>
@@ -33,6 +35,11 @@
     <ng-container matColumnDef="sec_code">
             <th mat-header-cell *matHeaderCellDef> Security Code</th>
             <td mat-cell *matCellDef="let bagCart">{{bagCart.sec_code}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="vuelo">
+        <th mat-header-cell *matHeaderCellDef> ID Vuelo</th>
+        <td mat-cell *matCellDef="let bagCart">{{bagCart.vuelo}}</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

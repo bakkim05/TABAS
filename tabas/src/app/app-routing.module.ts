@@ -16,6 +16,7 @@ import { EditClientesComponent } from './edit-clientes/edit-clientes.component';
 import { VuelosComponent } from './vuelos/vuelos.component';
 import { CreateVuelosComponent } from './create-vuelos/create-vuelos.component';
 import { EditVuelosComponent } from './edit-vuelos/edit-vuelos.component';
+import { CerrarBagCartsComponent } from './cerrar-bag-carts/cerrar-bag-carts.component';
 
 const routes: Routes = [
   {path : ''                      , component : LogInComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path : 'bagCarts'              , component : BagCartsComponent},
   {path : 'clientes'              , component : ClientesComponent},
   {path : 'vuelos'                , component : VuelosComponent},
+  {path : 'cerrarBagCarts'        , component : CerrarBagCartsComponent},
   {path : 'editMaletas'           , component : EditMaletasComponent},
   {path : 'editBagCarts'          , component : EditBagCartsComponent},
   {path : 'editClientes'          , component : EditClientesComponent},

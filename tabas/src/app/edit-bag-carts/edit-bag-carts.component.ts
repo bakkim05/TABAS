@@ -14,6 +14,7 @@ export class EditBagCartsComponent implements OnInit {
   private id = new FormControl('');
   private marca = new FormControl('');
   private modelo = new FormControl('');
+  private vuelo = new FormControl('');
 
 
   constructor(private http: HttpClient, private router: Router) { }
@@ -29,7 +30,8 @@ export class EditBagCartsComponent implements OnInit {
     sent.bagCart = {};
     sent.bagCart.id = parseInt(this.id.value);
     sent.bagCart.marca = this.marca.value;
-    sent.bagCart.modelo = this.modelo.value;
+    sent.bagCart.modelo = parseInt(this.modelo.value);
+    sent.bagCart.vuelo = parseInt(this.vuelo.value);
 
     return sent;
   }
