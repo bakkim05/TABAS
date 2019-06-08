@@ -28,8 +28,10 @@ namespace TABAS_REST.Controllers
 
         // POST: api/BagCart
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] BagCartModel value)
         {
+            new ProcessRequest().BagCartControllerPost(value);
+
         }
 
         // PUT: api/BagCart/5

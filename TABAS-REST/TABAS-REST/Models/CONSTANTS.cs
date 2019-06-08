@@ -55,13 +55,13 @@ namespace TABAS_REST.Models
         public const string CART_VUELO = "vuelo";
         //public const string CART_AVION = "avion";
 
-        //public const string CART_SEC_CODE = "sec_code";
+        public const string CART_SEC_CODE = "sec_code";
 
         // BagCart Nicko
         public const string PSQL_CART_ID = "bagcartid";
         public const string PSQL_CART_MARCA = "brand";
         public const string PSQL_CART_MODELO = "model";
-        //public const string PSQL_CART_SEC_CODE = "sec_code";
+        public const string PSQL_CART_SEC_CODE = "sec_code";
 
         //Bag - Jung
 
