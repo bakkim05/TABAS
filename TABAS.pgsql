@@ -52,10 +52,36 @@ CREATE TABLE PlaneModel (
   CellarNumber bigint
 );
 
+-- insert listo
 CREATE TABLE Cellar (
   CellarID bigint PRIMARY KEY NOT NULL,
   Capacity bigint
 );
+
+CREATE TABLE ReportSuitcase (
+  ReportID BIGINT PRIMARY KEY NOT NULL,
+  TypeID BIGINT,
+  Capacity INTEGER,
+  SuitCasesOnPlane INTEGER,
+  SuitCasesOnFlight INTEGER,
+  SuitCasesOnBagCart INTEGER,
+)
+
+CREATE TABLE FlightXReport (
+  ReportID BIGINT,
+  FlightID BIGINT,
+  PRIMARY KEY (ReportID, FlightID)
+)
+
+CREATE TABLE Banned(
+  BannedSuitCaseID BIGINT PRIMARY KEY NOT NULL
+)
+
+CREATE TABLE BannedByFlight (
+  ReportID BIGINT,
+  BannedSuitCaseID BIGINT,
+  PRIMARY KEY (ReportID, BannedSuitCaseID)
+)
 
 -- insert listo
 CREATE TABLE ClientXSuitCase (
@@ -98,12 +124,6 @@ CREATE TABLE PlaneXCellar (
   CellarID bigint,
   PRIMARY KEY (PlaneID, CellarID)
 );
-
--- CREATE TABLE SuitCaseXCellar (
---   SuitCaseID bigint,
---   CellarID bigint,
---   PRIMARY KEY (SuitCaseID, CellarID)
--- )
 
 ALTER TABLE ClientXSuitCase ADD FOREIGN KEY (ClientID) REFERENCES Client (ClientID);
 ALTER TABLE ClientXSuitCase ADD FOREIGN KEY (SuitCaseID) REFERENCES SuitCase (SuitCaseID);

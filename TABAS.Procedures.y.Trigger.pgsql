@@ -1,9 +1,12 @@
-CREATE PROCEDURE insert_maleta(id BIGINT, color varchar (10), peso INTEGER, costo INTEGER)
+CREATE PROCEDURE insert_maleta(id_suitcase BIGINT, color varchar (10), peso INTEGER, costo INTEGER, id_client BIGINT)
     LANGUAGE SQL
         AS $$
             INSERT INTO SuitCase (SuitcaseID, Color, Weight, Cost, State)
                 VALUES
                     (id, color, peso, costo, FALSE);
+            INSERT INTO ClientXSuitCase (ClietnID, SuitCaseID)
+                VALUES
+                    (id_suitcase, id_clietn);
         $$;
 
 CREATE PROCEDURE insert_cliente(id BIGINT, nombre VARCHAR (15), apellido VARCHAR (15), email VARCHAR (320), phone INTEGER, carnet VARCHAR (30))
