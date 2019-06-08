@@ -27,13 +27,13 @@ namespace TABAS_REST.Controllers
             return new ProcessRequest().MaletaXusuarioGet();
         }
 
-        // GET: api/BagCart
-        //[HttpGet]
-        //[Route("api/bags/conciliacion")]
-        //public ActionResult<IEnumerable<MaletasxUsuarioModel>> Get2()
-        //{
-        //    return new ProcessRequest().MaletaConciliacionGet();
-        //}
+        //GET: api/BagCart report conciliacio
+       [HttpGet]
+       [Route("api/bags/conciliacion")]
+        public ActionResult<IEnumerable<Conciliacion>> Get2()
+        {
+            return new ProcessRequest().MaletaConciliacionGet();
+        }
 
         // GET: api/Bags/5
         //[HttpGet("{id}", Name = "Get")]

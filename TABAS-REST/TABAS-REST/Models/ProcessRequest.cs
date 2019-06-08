@@ -190,7 +190,7 @@ namespace TABAS_REST.Models
         }
 
         /**
-         * Retorna todas las maletas enlistadas en el sistema
+         * Retorna todas las maletas enlistadas en el sistema junto con datos del bag cart y el dueno
          */
         public List<BagModel> BagControllerGet()
         {
@@ -226,8 +226,58 @@ namespace TABAS_REST.Models
             }
             return lis;
         }
-            
-                //Console.WriteLine(reader.GetString(0));
+
+        /**
+         * Retorna todas las maletas enlistadas en el sistema junto con datos del bag cart y el dueno
+         */
+        public List<Conciliacion> MaletaConciliacionGet()
+        {
+            List<Conciliacion> lis = new List<Conciliacion>();
+
+            using (var conn = new NpgsqlConnection(CONSTANTS.CONN_STR_POSTGRE_SQL))
+            {
+                conn.Open();
+
+                // Retrieve all rows
+                using (var cmd = new NpgsqlCommand(
+                    "select f.flightid, pll.planemodelid, ce.capacity, count(bg.bagcartid), count(su.suitcaseid)"+
+                    "from flight f"+
+                    "join planexflight pf on f.flightid = pf.flightid"+
+                    "join plane pl on pl.planeid = pf.planeid"+
+                    "join planexplanemodel pll on pll.planeid = pl.planeid"+
+                    "join planexcellar pc on pl.planeid = pc.planeid"+
+                    "join cellar ce on ce.cellarid = pc.cellarid"+
+                    "join flightxbagcart fb on fb.flightid = f.flightid"+
+                    "join bagcart bg on bg.bagcartid = fb.bagcartid"+
+                    "join suitcasexbagcart sb on sb.bagcartid = bg.bagcartid"+
+                    "join suitcase su on su.suitcaseid = sb.suitcaseid"+
+                    "group by f.flightid, pll.planemodelid, ce.capacity"
+                    , conn))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            lis.Add(new Conciliacion
+                            {
+                                NumeroVuelo = reader.GetInt64(0),
+                                TipoAvion = reader.GetInt64(1),
+                                Capacidad = reader.GetInt64(2),
+                                MaletasBagCart = reader.GetInt64(3),
+                                MaletasAvion = reader.GetInt64(4)
+                            });
+
+                        }
+                    }
+                }
+
+                conn.Close();
+            }
+            return lis;
+        }
+
+
+        //Console.WriteLine(reader.GetString(0));
 
 
         /**

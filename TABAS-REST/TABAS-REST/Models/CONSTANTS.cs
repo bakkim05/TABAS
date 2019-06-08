@@ -108,8 +108,11 @@ namespace TABAS_REST.Models
         //maletas por persona
         public const string CANT_MALETAS = "cant";
 
+        //Conciliacion maletas - reporte
+        public const string CONC_N_VUELO = "numvuelo";
+        public const string CONC_TIPO_AVION = "tipoavion";
+        public const string CONC_CAPACIDAD = "capacidad";
+        public const string CONC_EN_CART = "maletasbagcart";
+        public const string CONC_EN_AVION= "maletasavion";
     }
 }
-
-        //public const string s = "";
-        //public const string s = "";
