@@ -33,7 +33,7 @@ namespace TABAS_REST.Controllers
         public ActionResult<IEnumerable<UserModel>> Post([FromBody] UserModel value)
         {
             //UserModel value = JsonConvert.DeserializeObject<UserModel>(p_Value);
-            //new ProcessRequest().UserControllerPost(value);
+            new ProcessRequest().UserControllerPost(value);
             return new List<UserModel>() { value };
         }
 
