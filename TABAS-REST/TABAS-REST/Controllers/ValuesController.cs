@@ -17,17 +17,17 @@ namespace TABAS_REST.Controllers
         // GET api/values
         [HttpGet]
         [EnableCors("AllowMyOrigin")]
-        public ActionResult<IEnumerable<PutojungModel>> Get()
+        public ActionResult<IEnumerable<UserModel>> Get()
         {
             return new[]
             {
-                new PutojungModel
+                new UserModel
                 {
                     Nombre = "Puto Jung",
                     Apellido = "kabron",
                     Mail = "Jung@carepicha.com",
                     Tel = 666666666,
-                    Carnet = 2015127575
+                    Carnet = "2015127575"
                 }
             };
         }
